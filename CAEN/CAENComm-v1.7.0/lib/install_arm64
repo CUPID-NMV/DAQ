@@ -1,0 +1,38 @@
+#!/bin/sh
+#=============================================================================
+#
+#             --- CAEN SpA - Computing Systems Division ---
+#
+#  Library installation script for arm64 systems.
+#
+#=============================================================================
+
+if [ ! -f /usr/lib/libCAENVME.so ] 
+then
+    echo >&2 "*******************************************************************"
+    echo >&2 "* ERROR                                                           *"
+    echo >&2 "* This library requires the CAENVME library.                      *"
+    echo >&2 "* Please download it from the following link:                     *"
+    echo >&2 "*                                                                 *"
+    echo >&2 "* https://www.caen.it/download/                                   *"
+    echo >&2 "*                                                                 *"
+    echo >&2 "* Install it and run try again.                                   *"
+    echo >&2 "*******************************************************************"
+    exit 1
+fi
+
+search_dir=./arm64
+
+for file in "$search_dir"/*
+do
+    install $file /usr/lib/
+    filename="$(basename -- $file)"
+    ln -sf /usr/lib/$filename /usr/lib/libCAENComm.so
+done
+
+/sbin/ldconfig
+
+for file in ../include/*
+do
+    install -m 644 $file /usr/include/
+done

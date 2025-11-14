@@ -1,0 +1,61 @@
+{
+   "/MIDAS version": "2.1",
+   "/filename": "/DAQtest.json",
+   "/ODB path": "/Programs/DAQWC",
+   "Required/key": {
+      "type": 8,
+      "access_mode": 7,
+      "last_written": 1741353863
+   },
+   "Required": true,
+   "Watchdog timeout/key": {
+      "type": 7,
+      "access_mode": 7,
+      "last_written": 1741343686
+   },
+   "Watchdog timeout": 10000,
+   "Check interval/key": {
+      "type": 6,
+      "access_mode": 7,
+      "last_written": 1741343686
+   },
+   "Check interval": "0x0002bf20",
+   "Start command/key": {
+      "type": 12,
+      "item_size": 256,
+      "access_mode": 7,
+      "last_written": 1741353337
+   },
+   "Start command": "/home/daq/packages/DAQ/DAQ_WC/IODemo",
+   "Auto start/key": {
+      "type": 8,
+      "access_mode": 7,
+      "last_written": 1741344817
+   },
+   "Auto start": true,
+   "Auto stop/key": {
+      "type": 8,
+      "access_mode": 7,
+      "last_written": 1741343686
+   },
+   "Auto stop": false,
+   "Auto restart/key": {
+      "type": 8,
+      "access_mode": 7,
+      "last_written": 1744620265
+   },
+   "Auto restart": true,
+   "Alarm class/key": {
+      "type": 12,
+      "item_size": 32,
+      "access_mode": 7,
+      "last_written": 1741343686
+   },
+   "Alarm class": "",
+   "First failed/key": {
+      "type": 6,
+      "access_mode": 7,
+      "last_written": 1741344735
+   },
+   "First failed": "0x67cacbc6"
+}

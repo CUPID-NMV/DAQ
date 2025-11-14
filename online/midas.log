@@ -1,0 +1,386 @@
+09:14:46.970 2025/02/26 [ODBEdit,LOG] Program ODBEdit on host localhost started
+09:15:14.926 2025/02/26 [ODBEdit,LOG] Program ODBEdit on host localhost stopped
+09:15:19.820 2025/02/26 [mhttpd,LOG] Program mhttpd on host localhost started
+09:15:19.820 2025/02/26 [mhttpd,INFO] ODB subtree /Runinfo corrected successfully
+13:30:49.890 2025/02/26 [mhttpd,ERROR] [odb.cxx:2043:db_open_database,ERROR] Removed ODB client 'mhttpd', index 0 because process pid 9219 does not exists
+13:30:49.890 2025/02/26 [mhttpd,INFO] Removed open record flag from "/Experiment/Security/RPC hosts/Allowed hosts"
+13:30:49.890 2025/02/26 [mhttpd,INFO] Removed exclusive access mode from "/Experiment/Security/RPC hosts/Allowed hosts"
+13:30:49.890 2025/02/26 [mhttpd,INFO] Corrected 1 ODB entries
+13:30:49.890 2025/02/26 [mhttpd,INFO] Deleted entry '/System/Clients/9219' for client 'mhttpd' because it is not connected to ODB
+13:30:49.890 2025/02/26 [mhttpd,LOG] Program mhttpd on host localhost started
+13:51:16.447 2025/02/26 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+13:51:16.447 2025/02/26 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "localhost:8080"
+13:51:16.447 2025/02/26 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "[::1]:8080"
+13:51:16.447 2025/02/26 [mhttpd1,ERROR] [mhttpd.cxx:15841:mongoose_init,ERROR] Failed to listen on a TCP port enabled in ODB /WebServer
+13:51:16.447 2025/02/26 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+11:15:21.766 2025/02/28 [mhttpd,ERROR] [odb.cxx:2043:db_open_database,ERROR] Removed ODB client 'mhttpd', index 0 because process pid 6007 does not exists
+11:15:21.766 2025/02/28 [mhttpd,INFO] Removed open record flag from "/Experiment/Security/RPC hosts/Allowed hosts"
+11:15:21.766 2025/02/28 [mhttpd,INFO] Removed exclusive access mode from "/Experiment/Security/RPC hosts/Allowed hosts"
+11:15:21.766 2025/02/28 [mhttpd,INFO] Corrected 1 ODB entries
+11:15:21.766 2025/02/28 [mhttpd,INFO] Deleted entry '/System/Clients/6007' for client 'mhttpd' because it is not connected to ODB
+11:15:21.766 2025/02/28 [mhttpd,LOG] Program mhttpd on host localhost started
+15:06:58.696 2025/03/03 [mhttpd,ERROR] [odb.cxx:2043:db_open_database,ERROR] Removed ODB client 'mhttpd', index 0 because process pid 5680 does not exists
+15:06:58.696 2025/03/03 [mhttpd,INFO] Removed open record flag from "/Experiment/Security/RPC hosts/Allowed hosts"
+15:06:58.696 2025/03/03 [mhttpd,INFO] Removed exclusive access mode from "/Experiment/Security/RPC hosts/Allowed hosts"
+15:06:58.696 2025/03/03 [mhttpd,INFO] Corrected 1 ODB entries
+15:06:58.696 2025/03/03 [mhttpd,INFO] Deleted entry '/System/Clients/5680' for client 'mhttpd' because it is not connected to ODB
+15:06:58.696 2025/03/03 [mhttpd,INFO] Client 'mhttpd' on buffer 'SYSMSG' removed by bm_open_buffer because process pid 5680 does not exist
+15:06:58.696 2025/03/03 [mhttpd,LOG] Program mhttpd on host localhost started
+15:37:12.115 2025/03/03 [mhttpd,ERROR] [odb.cxx:2043:db_open_database,ERROR] Removed ODB client 'mhttpd', index 0 because process pid 151073 does not exists
+15:37:12.115 2025/03/03 [mhttpd,INFO] Removed open record flag from "/Experiment/Security/RPC hosts/Allowed hosts"
+15:37:12.115 2025/03/03 [mhttpd,INFO] Removed exclusive access mode from "/Experiment/Security/RPC hosts/Allowed hosts"
+15:37:12.115 2025/03/03 [mhttpd,INFO] Corrected 1 ODB entries
+15:37:12.115 2025/03/03 [mhttpd,INFO] Deleted entry '/System/Clients/151073' for client 'mhttpd' because it is not connected to ODB
+15:37:12.115 2025/03/03 [mhttpd,LOG] Program mhttpd on host localhost started
+15:38:53.153 2025/03/03 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+15:38:53.153 2025/03/03 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "localhost:8080"
+15:38:53.153 2025/03/03 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "[::1]:8080"
+15:38:53.153 2025/03/03 [mhttpd1,ERROR] [mhttpd.cxx:15841:mongoose_init,ERROR] Failed to listen on a TCP port enabled in ODB /WebServer
+15:38:53.153 2025/03/03 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+16:37:33.569 2025/03/03 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+16:37:33.569 2025/03/03 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "localhost:8080"
+16:37:33.569 2025/03/03 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "[::1]:8080"
+16:37:33.569 2025/03/03 [mhttpd1,ERROR] [mhttpd.cxx:15841:mongoose_init,ERROR] Failed to listen on a TCP port enabled in ODB /WebServer
+16:37:33.570 2025/03/03 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+16:40:32.688 2025/03/03 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+16:40:32.688 2025/03/03 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "localhost:8080"
+16:40:32.688 2025/03/03 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "[::1]:8080"
+16:40:32.688 2025/03/03 [mhttpd1,ERROR] [mhttpd.cxx:15841:mongoose_init,ERROR] Failed to listen on a TCP port enabled in ODB /WebServer
+16:40:32.688 2025/03/03 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+09:55:33.876 2025/03/04 [mhttpd,ERROR] [odb.cxx:2043:db_open_database,ERROR] Removed ODB client 'mhttpd', index 0 because process pid 4993 does not exists
+09:55:33.876 2025/03/04 [mhttpd,INFO] Removed open record flag from "/Experiment/Security/RPC hosts/Allowed hosts"
+09:55:33.876 2025/03/04 [mhttpd,INFO] Removed exclusive access mode from "/Experiment/Security/RPC hosts/Allowed hosts"
+09:55:33.876 2025/03/04 [mhttpd,INFO] Corrected 1 ODB entries
+09:55:33.876 2025/03/04 [mhttpd,INFO] Deleted entry '/System/Clients/4993' for client 'mhttpd' because it is not connected to ODB
+09:55:33.876 2025/03/04 [mhttpd,INFO] Client 'mhttpd' on buffer 'SYSMSG' removed by bm_open_buffer because process pid 4993 does not exist
+09:55:33.876 2025/03/04 [mhttpd,LOG] Program mhttpd on host localhost started
+14:50:19.243 2025/03/04 [Sequencer,LOG] Program Sequencer on host localhost started
+14:50:23.490 2025/03/04 [mhttpd,ERROR] [midas.cxx:6723:bm_open_buffer,ERROR] cannot open buffer with zero name
+14:50:24.585 2025/03/04 [mhttpd,ERROR] [midas.cxx:6723:bm_open_buffer,ERROR] cannot open buffer with zero name
+11:31:46.715 2025/03/07 [mhttpd,ERROR] [odb.cxx:3636:db_create_link,ERROR] Existing key "/Programs/DAQ" is not a link
+11:34:08.924 2025/03/07 [mhttpd,ERROR] [odb.cxx:3550:db_create_key,ERROR] object of type 10 already exists at "/Programs/DAQ" while creating '/Programs/DAQ' of type 15 in 'root'
+11:34:46.005 2025/03/07 [Sequencer,INFO] Fixing ODB "/Programs/DAQWC" struct size mismatch (expected 316, odb size 0)
+11:37:12.243 2025/03/07 [mhttpd,LOG] Program mhttpd on host localhost stopped
+11:49:55.805 2025/03/07 [mhttpd,ERROR] [odb.cxx:2043:db_open_database,ERROR] Removed ODB client 'Sequencer', index 1 because process pid 35786 does not exists
+11:49:55.805 2025/03/07 [mhttpd,INFO] Removed open record flag from "/Experiment/Security/RPC hosts/Allowed hosts"
+11:49:55.805 2025/03/07 [mhttpd,INFO] Removed exclusive access mode from "/Experiment/Security/RPC hosts/Allowed hosts"
+11:49:55.805 2025/03/07 [mhttpd,INFO] Removed open record flag from "/Sequencer/State"
+11:49:55.805 2025/03/07 [mhttpd,INFO] Removed exclusive access mode from "/Sequencer/State"
+11:49:55.805 2025/03/07 [mhttpd,INFO] Removed open record flag from "/Sequencer/Command"
+11:49:55.805 2025/03/07 [mhttpd,INFO] Removed exclusive access mode from "/Sequencer/Command"
+11:49:55.805 2025/03/07 [mhttpd,INFO] Corrected 3 ODB entries
+11:49:55.805 2025/03/07 [mhttpd,INFO] Deleted entry '/System/Clients/35786' for client 'Sequencer' because it is not connected to ODB
+11:49:55.805 2025/03/07 [mhttpd,LOG] Program mhttpd on host localhost started
+13:32:46.831 2025/03/07 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+13:32:46.831 2025/03/07 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "localhost:8080"
+13:32:46.831 2025/03/07 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "[::1]:8080"
+13:32:46.832 2025/03/07 [mhttpd1,ERROR] [mhttpd.cxx:15841:mongoose_init,ERROR] Failed to listen on a TCP port enabled in ODB /WebServer
+13:32:46.832 2025/03/07 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+15:25:13.826 2025/03/07 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+15:25:13.826 2025/03/07 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "localhost:8080"
+15:25:13.826 2025/03/07 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "[::1]:8080"
+15:25:13.826 2025/03/07 [mhttpd1,ERROR] [mhttpd.cxx:15841:mongoose_init,ERROR] Failed to listen on a TCP port enabled in ODB /WebServer
+15:25:13.826 2025/03/07 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+10:44:34.011 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:44:45.003 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:44:56.010 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:45:07.011 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:45:18.009 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:45:29.009 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:45:40.006 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:45:51.014 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:46:02.009 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:46:13.004 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:46:24.004 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:46:35.009 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:46:46.010 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:46:57.014 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:47:08.008 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:47:19.010 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:47:30.008 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:47:41.005 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:47:52.007 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:48:03.011 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:48:14.007 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:48:25.009 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:48:36.008 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:48:47.002 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:48:58.004 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:49:09.006 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:49:20.010 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:49:31.011 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:49:42.012 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:49:53.009 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:50:04.008 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:50:15.009 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:50:26.010 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:50:37.009 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:50:48.012 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:50:59.007 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:51:10.005 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:51:21.004 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:51:32.007 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:51:43.008 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:51:54.011 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:52:05.011 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:52:16.011 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:52:27.006 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:52:38.005 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:52:49.011 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:53:00.005 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:53:11.006 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:53:22.003 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:53:33.013 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+10:53:44.005 2025/04/14 [mhttpd,TALK] Program DAQWC restarted
+11:00:14.213 2025/04/14 [mhttpd,ERROR] [odb.cxx:2043:db_open_database,ERROR] Removed ODB client 'mhttpd', index 0 because process pid 5972 does not exists
+11:00:14.214 2025/04/14 [mhttpd,INFO] Removed open record flag from "/Experiment/Security/RPC hosts/Allowed hosts"
+11:00:14.214 2025/04/14 [mhttpd,INFO] Removed exclusive access mode from "/Experiment/Security/RPC hosts/Allowed hosts"
+11:00:14.214 2025/04/14 [mhttpd,INFO] Corrected 1 ODB entries
+11:00:14.214 2025/04/14 [mhttpd,INFO] Deleted entry '/System/Clients/5972' for client 'mhttpd' because it is not connected to ODB
+11:00:14.214 2025/04/14 [mhttpd,LOG] Program mhttpd on host localhost started
+11:00:34.071 2025/04/14 [fetest,LOG] Program fetest on host localhost started
+11:00:34.071 2025/04/14 [fetest,INFO] Init Ok!
+11:00:50.317 2025/04/14 [fetest,INFO] Begin run 1!
+11:00:50.321 2025/04/14 [mhttpd,INFO] Run #1 started
+11:01:32.006 2025/04/14 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+11:01:32.006 2025/04/14 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "localhost:8080"
+11:01:32.006 2025/04/14 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "[::1]:8080"
+11:01:32.006 2025/04/14 [mhttpd1,ERROR] [mhttpd.cxx:15841:mongoose_init,ERROR] Failed to listen on a TCP port enabled in ODB /WebServer
+11:01:32.006 2025/04/14 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+11:04:17.402 2025/04/14 [fetest,LOG] Program fetest on host localhost stopped
+11:04:50.922 2025/04/14 [mhttpd,INFO] Run #1 stopped
+11:07:02.503 2025/04/14 [mhttpd,ERROR] [odb.cxx:3550:db_create_key,ERROR] object of type 7 already exists at "/Programs/WCdaq" while creating '/Programs/wcDAQ' of type 15 in 'root'
+11:07:12.004 2025/04/14 [mhttpd,INFO] Fixing ODB "/Programs/WCdaq" struct size mismatch (expected 316, odb size 0)
+13:20:40.400 2025/04/14 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+13:20:40.400 2025/04/14 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "localhost:8080"
+13:20:40.400 2025/04/14 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "[::1]:8080"
+13:20:40.400 2025/04/14 [mhttpd1,ERROR] [mhttpd.cxx:15841:mongoose_init,ERROR] Failed to listen on a TCP port enabled in ODB /WebServer
+13:20:40.400 2025/04/14 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+15:36:10.494 2025/05/05 [mhttpd,ERROR] [odb.cxx:2043:db_open_database,ERROR] Removed ODB client 'mhttpd', index 0 because process pid 5734 does not exists
+15:36:10.495 2025/05/05 [mhttpd,INFO] Removed open record flag from "/Experiment/Security/RPC hosts/Allowed hosts"
+15:36:10.495 2025/05/05 [mhttpd,INFO] Removed exclusive access mode from "/Experiment/Security/RPC hosts/Allowed hosts"
+15:36:10.495 2025/05/05 [mhttpd,INFO] Corrected 1 ODB entries
+15:36:10.495 2025/05/05 [mhttpd,INFO] Deleted entry '/System/Clients/5734' for client 'mhttpd' because it is not connected to ODB
+15:36:10.495 2025/05/05 [mhttpd,LOG] Program mhttpd on host localhost started
+16:26:41.892 2025/05/05 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+16:26:41.892 2025/05/05 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "localhost:8080"
+16:26:41.892 2025/05/05 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "[::1]:8080"
+16:26:41.892 2025/05/05 [mhttpd1,ERROR] [mhttpd.cxx:15841:mongoose_init,ERROR] Failed to listen on a TCP port enabled in ODB /WebServer
+16:26:41.892 2025/05/05 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+15:19:20.556 2025/07/01 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+15:19:20.556 2025/07/01 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "localhost:8080"
+15:19:20.556 2025/07/01 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "[::1]:8080"
+15:19:20.556 2025/07/01 [mhttpd1,ERROR] [mhttpd.cxx:15841:mongoose_init,ERROR] Failed to listen on a TCP port enabled in ODB /WebServer
+15:19:20.556 2025/07/01 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+16:13:13.475 2025/07/01 [mhttpd,ERROR] [odb.cxx:2043:db_open_database,ERROR] Removed ODB client 'mhttpd', index 0 because process pid 8301 does not exists
+16:13:13.475 2025/07/01 [mhttpd,INFO] Removed open record flag from "/Experiment/Security/RPC hosts/Allowed hosts"
+16:13:13.475 2025/07/01 [mhttpd,INFO] Removed exclusive access mode from "/Experiment/Security/RPC hosts/Allowed hosts"
+16:13:13.475 2025/07/01 [mhttpd,INFO] Corrected 1 ODB entries
+16:13:13.475 2025/07/01 [mhttpd,INFO] Deleted entry '/System/Clients/8301' for client 'mhttpd' because it is not connected to ODB
+16:13:13.475 2025/07/01 [mhttpd,LOG] Program mhttpd on host localhost started
+16:13:17.719 2025/07/01 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+16:13:17.719 2025/07/01 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "localhost:8080"
+16:13:17.719 2025/07/01 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "[::1]:8080"
+16:13:17.720 2025/07/01 [mhttpd1,ERROR] [mhttpd.cxx:15841:mongoose_init,ERROR] Failed to listen on a TCP port enabled in ODB /WebServer
+16:13:17.720 2025/07/01 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+15:38:22.307 2025/07/03 [mhttpd,ERROR] [odb.cxx:2043:db_open_database,ERROR] Removed ODB client 'mhttpd', index 0 because process pid 4439 does not exists
+15:38:22.307 2025/07/03 [mhttpd,INFO] Removed open record flag from "/Experiment/Security/RPC hosts/Allowed hosts"
+15:38:22.307 2025/07/03 [mhttpd,INFO] Removed exclusive access mode from "/Experiment/Security/RPC hosts/Allowed hosts"
+15:38:22.307 2025/07/03 [mhttpd,INFO] Corrected 1 ODB entries
+15:38:22.307 2025/07/03 [mhttpd,INFO] Deleted entry '/System/Clients/4439' for client 'mhttpd' because it is not connected to ODB
+15:38:22.307 2025/07/03 [mhttpd,LOG] Program mhttpd on host localhost started
+15:47:18.950 2025/07/03 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+15:47:18.950 2025/07/03 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "localhost:8080"
+15:47:18.950 2025/07/03 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "[::1]:8080"
+15:47:18.950 2025/07/03 [mhttpd1,ERROR] [mhttpd.cxx:15841:mongoose_init,ERROR] Failed to listen on a TCP port enabled in ODB /WebServer
+15:47:18.950 2025/07/03 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+22:01:42.631 2025/07/06 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+22:01:42.631 2025/07/06 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "localhost:8080"
+22:01:42.631 2025/07/06 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "[::1]:8080"
+22:01:42.631 2025/07/06 [mhttpd1,ERROR] [mhttpd.cxx:15841:mongoose_init,ERROR] Failed to listen on a TCP port enabled in ODB /WebServer
+22:01:42.631 2025/07/06 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+09:42:42.254 2025/07/07 [mhttpd,ERROR] [odb.cxx:2043:db_open_database,ERROR] Removed ODB client 'mhttpd', index 0 because process pid 4382 does not exists
+09:42:42.255 2025/07/07 [mhttpd,INFO] Removed open record flag from "/Experiment/Security/RPC hosts/Allowed hosts"
+09:42:42.255 2025/07/07 [mhttpd,INFO] Removed exclusive access mode from "/Experiment/Security/RPC hosts/Allowed hosts"
+09:42:42.255 2025/07/07 [mhttpd,INFO] Corrected 1 ODB entries
+09:42:42.255 2025/07/07 [mhttpd,INFO] Deleted entry '/System/Clients/4382' for client 'mhttpd' because it is not connected to ODB
+09:42:42.255 2025/07/07 [mhttpd,LOG] Program mhttpd on host localhost started
+09:42:45.260 2025/07/07 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+09:42:45.260 2025/07/07 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "localhost:8080"
+09:42:45.260 2025/07/07 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "[::1]:8080"
+09:42:45.260 2025/07/07 [mhttpd1,ERROR] [mhttpd.cxx:15841:mongoose_init,ERROR] Failed to listen on a TCP port enabled in ODB /WebServer
+09:42:45.260 2025/07/07 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+09:46:53.789 2025/07/07 [mhttpd,ERROR] [odb.cxx:2043:db_open_database,ERROR] Removed ODB client 'mhttpd', index 0 because process pid 5880 does not exists
+09:46:53.789 2025/07/07 [mhttpd,INFO] Removed open record flag from "/Experiment/Security/RPC hosts/Allowed hosts"
+09:46:53.789 2025/07/07 [mhttpd,INFO] Removed exclusive access mode from "/Experiment/Security/RPC hosts/Allowed hosts"
+09:46:53.789 2025/07/07 [mhttpd,INFO] Corrected 1 ODB entries
+09:46:53.789 2025/07/07 [mhttpd,INFO] Deleted entry '/System/Clients/5880' for client 'mhttpd' because it is not connected to ODB
+09:46:53.789 2025/07/07 [mhttpd,INFO] Client 'mhttpd' on buffer 'SYSMSG' removed by bm_open_buffer because process pid 5880 does not exist
+09:46:53.789 2025/07/07 [mhttpd,LOG] Program mhttpd on host localhost started
+09:46:59.588 2025/07/07 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+09:46:59.589 2025/07/07 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "localhost:8080"
+09:46:59.589 2025/07/07 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "[::1]:8080"
+09:46:59.589 2025/07/07 [mhttpd1,ERROR] [mhttpd.cxx:15841:mongoose_init,ERROR] Failed to listen on a TCP port enabled in ODB /WebServer
+09:46:59.589 2025/07/07 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+09:47:00.102 2025/07/07 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+09:47:00.103 2025/07/07 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "localhost:8080"
+09:47:00.103 2025/07/07 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "[::1]:8080"
+09:47:00.103 2025/07/07 [mhttpd1,ERROR] [mhttpd.cxx:15841:mongoose_init,ERROR] Failed to listen on a TCP port enabled in ODB /WebServer
+09:47:00.103 2025/07/07 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+14:21:47.511 2025/07/11 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+14:21:47.511 2025/07/11 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "localhost:8080"
+14:21:47.511 2025/07/11 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "[::1]:8080"
+14:21:47.511 2025/07/11 [mhttpd1,ERROR] [mhttpd.cxx:15841:mongoose_init,ERROR] Failed to listen on a TCP port enabled in ODB /WebServer
+14:21:47.511 2025/07/11 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+14:22:39.645 2025/07/11 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+14:22:39.645 2025/07/11 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "localhost:8080"
+14:22:39.645 2025/07/11 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "[::1]:8080"
+14:22:39.645 2025/07/11 [mhttpd1,ERROR] [mhttpd.cxx:15841:mongoose_init,ERROR] Failed to listen on a TCP port enabled in ODB /WebServer
+14:22:39.645 2025/07/11 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+17:17:41.180 2025/07/11 [mhttpd,LOG] Program mhttpd on host localhost stopped
+01:09:54.409 2025/07/13 [mhttpd,LOG] Program mhttpd on host localhost started
+01:16:42.545 2025/07/13 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+01:16:42.545 2025/07/13 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "localhost:8080"
+01:16:42.545 2025/07/13 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "[::1]:8080"
+01:16:42.545 2025/07/13 [mhttpd1,ERROR] [mhttpd.cxx:15841:mongoose_init,ERROR] Failed to listen on a TCP port enabled in ODB /WebServer
+01:16:42.545 2025/07/13 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+01:41:44.305 2025/07/13 [mhttpd,LOG] Program mhttpd on host localhost stopped
+14:50:18.167 2025/07/13 [mhttpd,LOG] Program mhttpd on host localhost started
+09:08:02.152 2025/07/14 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+09:08:02.152 2025/07/14 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "localhost:8080"
+09:08:02.152 2025/07/14 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "[::1]:8080"
+09:08:02.152 2025/07/14 [mhttpd1,ERROR] [mhttpd.cxx:15841:mongoose_init,ERROR] Failed to listen on a TCP port enabled in ODB /WebServer
+09:08:02.152 2025/07/14 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+10:12:49.135 2025/10/27 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+10:12:49.135 2025/10/27 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "localhost:8080"
+10:12:49.135 2025/10/27 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "[::1]:8080"
+10:12:49.135 2025/10/27 [mhttpd1,ERROR] [mhttpd.cxx:15841:mongoose_init,ERROR] Failed to listen on a TCP port enabled in ODB /WebServer
+10:12:49.135 2025/10/27 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+10:14:59.016 2025/10/27 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+10:14:59.016 2025/10/27 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "localhost:8080"
+10:14:59.017 2025/10/27 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "[::1]:8080"
+10:14:59.017 2025/10/27 [mhttpd1,ERROR] [mhttpd.cxx:15841:mongoose_init,ERROR] Failed to listen on a TCP port enabled in ODB /WebServer
+10:14:59.017 2025/10/27 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+09:59:38.245 2025/10/29 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+09:59:38.245 2025/10/29 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "localhost:8080"
+09:59:38.245 2025/10/29 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "[::1]:8080"
+09:59:38.245 2025/10/29 [mhttpd1,ERROR] [mhttpd.cxx:15841:mongoose_init,ERROR] Failed to listen on a TCP port enabled in ODB /WebServer
+09:59:38.245 2025/10/29 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+10:31:21.886 2025/10/29 [mhttpd,ERROR] [odb.cxx:2043:db_open_database,ERROR] Removed ODB client 'mhttpd', index 0 because process pid 5491 does not exists
+10:31:21.886 2025/10/29 [mhttpd,INFO] Removed open record flag from "/Experiment/Security/RPC hosts/Allowed hosts"
+10:31:21.886 2025/10/29 [mhttpd,INFO] Removed exclusive access mode from "/Experiment/Security/RPC hosts/Allowed hosts"
+10:31:21.886 2025/10/29 [mhttpd,INFO] Corrected 1 ODB entries
+10:31:21.886 2025/10/29 [mhttpd,INFO] Deleted entry '/System/Clients/5491' for client 'mhttpd' because it is not connected to ODB
+10:31:21.886 2025/10/29 [mhttpd,LOG] Program mhttpd on host localhost started
+10:32:39.272 2025/10/29 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+10:32:39.272 2025/10/29 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "localhost:8080"
+10:32:39.272 2025/10/29 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "[::1]:8080"
+10:32:39.273 2025/10/29 [mhttpd1,ERROR] [mhttpd.cxx:15841:mongoose_init,ERROR] Failed to listen on a TCP port enabled in ODB /WebServer
+10:32:39.273 2025/10/29 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+10:55:22.124 2025/10/29 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+10:55:22.124 2025/10/29 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "localhost:8080"
+10:55:22.124 2025/10/29 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "[::1]:8080"
+10:55:22.124 2025/10/29 [mhttpd1,ERROR] [mhttpd.cxx:15841:mongoose_init,ERROR] Failed to listen on a TCP port enabled in ODB /WebServer
+10:55:22.124 2025/10/29 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+11:00:28.799 2025/10/29 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+11:00:28.799 2025/10/29 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "localhost:8080"
+11:00:28.799 2025/10/29 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "[::1]:8080"
+11:00:28.799 2025/10/29 [mhttpd1,ERROR] [mhttpd.cxx:15841:mongoose_init,ERROR] Failed to listen on a TCP port enabled in ODB /WebServer
+11:00:28.799 2025/10/29 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+11:16:21.383 2025/10/29 [mhttpd,LOG] Program mhttpd on host localhost stopped
+11:29:54.382 2025/10/29 [mhttpd,LOG] Program mhttpd on host localhost started
+14:49:30.145 2025/10/29 [mhttpd,ERROR] [odb.cxx:2043:db_open_database,ERROR] Removed ODB client 'mhttpd', index 0 because process pid 20866 does not exists
+14:49:30.145 2025/10/29 [mhttpd,INFO] Removed open record flag from "/Experiment/Security/RPC hosts/Allowed hosts"
+14:49:30.145 2025/10/29 [mhttpd,INFO] Removed exclusive access mode from "/Experiment/Security/RPC hosts/Allowed hosts"
+14:49:30.145 2025/10/29 [mhttpd,INFO] Corrected 1 ODB entries
+14:49:30.145 2025/10/29 [mhttpd,INFO] Deleted entry '/System/Clients/20866' for client 'mhttpd' because it is not connected to ODB
+14:49:30.145 2025/10/29 [mhttpd,INFO] Client 'mhttpd' on buffer 'SYSMSG' removed by bm_open_buffer because process pid 20866 does not exist
+14:49:30.145 2025/10/29 [mhttpd,LOG] Program mhttpd on host localhost started
+15:18:16.600 2025/10/29 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+15:18:16.600 2025/10/29 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "localhost:8080"
+15:18:16.600 2025/10/29 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "[::1]:8080"
+15:18:16.600 2025/10/29 [mhttpd1,ERROR] [mhttpd.cxx:15841:mongoose_init,ERROR] Failed to listen on a TCP port enabled in ODB /WebServer
+15:18:16.600 2025/10/29 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+16:21:29.029 2025/10/29 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+16:21:29.029 2025/10/29 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "localhost:8080"
+16:21:29.029 2025/10/29 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "[::1]:8080"
+16:21:29.029 2025/10/29 [mhttpd1,ERROR] [mhttpd.cxx:15841:mongoose_init,ERROR] Failed to listen on a TCP port enabled in ODB /WebServer
+16:21:29.029 2025/10/29 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+16:23:37.308 2025/10/29 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+16:23:37.308 2025/10/29 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "localhost:8080"
+16:23:37.308 2025/10/29 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "[::1]:8080"
+16:23:37.308 2025/10/29 [mhttpd1,ERROR] [mhttpd.cxx:15841:mongoose_init,ERROR] Failed to listen on a TCP port enabled in ODB /WebServer
+16:23:37.308 2025/10/29 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+11:45:37.300 2025/10/30 [mhttpd,ERROR] [odb.cxx:2043:db_open_database,ERROR] Removed ODB client 'mhttpd', index 0 because process pid 24643 does not exists
+11:45:37.300 2025/10/30 [mhttpd,INFO] Removed open record flag from "/Experiment/Security/RPC hosts/Allowed hosts"
+11:45:37.300 2025/10/30 [mhttpd,INFO] Removed exclusive access mode from "/Experiment/Security/RPC hosts/Allowed hosts"
+11:45:37.300 2025/10/30 [mhttpd,INFO] Corrected 1 ODB entries
+11:45:37.300 2025/10/30 [mhttpd,INFO] Deleted entry '/System/Clients/24643' for client 'mhttpd' because it is not connected to ODB
+11:45:37.300 2025/10/30 [mhttpd,INFO] Client 'mhttpd' on buffer 'SYSMSG' removed by bm_open_buffer because process pid 24643 does not exist
+11:45:37.300 2025/10/30 [mhttpd,LOG] Program mhttpd on host localhost started
+12:07:00.007 2025/10/30 [ODBEdit,ERROR] [midas.cxx:2188:cm_set_experiment_local,ERROR] Experiment "WC" directory "/home/daq/online/" does not exist
+12:07:02.027 2025/10/30 [Logger,ERROR] [midas.cxx:2188:cm_set_experiment_local,ERROR] Experiment "WC" directory "/home/daq/online/" does not exist
+12:07:57.427 2025/10/30 [ODBEdit,INFO] Execute command from command line: "clean"
+12:07:59.456 2025/10/30 [Logger,LOG] Program Logger on host localhost started
+12:07:59.458 2025/10/30 [Logger,INFO] Per-variable history is enabled
+12:07:59.458 2025/10/30 [Logger,INFO] Cannot find /Equipment entry in database, history system is inactive
+12:08:20.206 2025/10/30 [Logger,LOG] Program Logger on host localhost stopped
+13:13:04.854 2025/10/30 [mhttpd,LOG] Program mhttpd on host localhost started
+13:13:04.854 2025/10/30 [mhttpd,INFO] ODB subtree /Runinfo corrected successfully
+13:13:10.762 2025/10/30 [mhttpd,LOG] Program mhttpd on host localhost stopped
+13:13:26.944 2025/10/30 [mhttpd,LOG] Program mhttpd on host localhost started
+13:14:01.087 2025/10/30 [mhttpd,LOG] Program mhttpd on host localhost stopped
+13:14:37.749 2025/10/30 [ODBEdit,INFO] Execute command from command line: "clean"
+13:14:37.763 2025/10/30 [mhttpd,LOG] Program mhttpd on host localhost started
+13:14:39.775 2025/10/30 [Logger,LOG] Program Logger on host localhost started
+13:14:39.776 2025/10/30 [Logger,INFO] Per-variable history is enabled
+13:14:39.776 2025/10/30 [Logger,INFO] Cannot find /Equipment entry in database, history system is inactive
+13:15:10.679 2025/10/30 [ODBEdit,LOG] Program ODBEdit on host localhost started
+13:15:40.929 2025/10/30 [ODBEdit,LOG] Program ODBEdit on host localhost stopped
+13:16:06.780 2025/10/30 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+13:16:06.780 2025/10/30 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "localhost:8080"
+13:16:06.780 2025/10/30 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "[::1]:8080"
+13:16:06.780 2025/10/30 [mhttpd1,ERROR] [mhttpd.cxx:15841:mongoose_init,ERROR] Failed to listen on a TCP port enabled in ODB /WebServer
+13:16:06.780 2025/10/30 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+13:18:39.711 2025/10/30 [ODBEdit,LOG] Program ODBEdit on host localhost started
+13:19:18.624 2025/10/30 [ODBEdit,LOG] Program ODBEdit on host localhost stopped
+13:19:21.355 2025/10/30 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+13:19:21.355 2025/10/30 [mhttpd1,ERROR] [mhttpd.cxx:13802:mongoose,ERROR] mongoose web server cannot find password file "/home/daq/DAQ/online/htpasswd.txt"
+13:19:21.355 2025/10/30 [mhttpd1,ERROR] [mhttpd.cxx:13803:mongoose,ERROR] please create password file: touch /home/daq/DAQ/online/htpasswd.txt
+13:19:21.356 2025/10/30 [mhttpd1,ERROR] [mhttpd.cxx:13740:mongoose,ERROR] mongoose web server password file "/home/daq/DAQ/online/htpasswd.txt" has no passwords for realm "WC"
+13:19:21.356 2025/10/30 [mhttpd1,ERROR] [mhttpd.cxx:13741:mongoose,ERROR] please add passwords by running: htdigest /home/daq/DAQ/online/htpasswd.txt WC midas
+13:19:21.356 2025/10/30 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+13:27:45.857 2025/10/30 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+13:27:45.857 2025/10/30 [mhttpd1,ERROR] [mhttpd.cxx:13740:mongoose,ERROR] mongoose web server password file "./htpasswd.txt" has no passwords for realm "WC"
+13:27:45.857 2025/10/30 [mhttpd1,ERROR] [mhttpd.cxx:13741:mongoose,ERROR] please add passwords by running: htdigest ./htpasswd.txt WC midas
+13:27:45.857 2025/10/30 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+13:27:55.188 2025/10/30 [ODBEdit,LOG] Program ODBEdit on host localhost started
+13:28:49.146 2025/10/30 [ODBEdit,LOG] Program ODBEdit on host localhost stopped
+13:29:25.868 2025/10/30 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+13:29:25.868 2025/10/30 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "localhost:8080"
+13:29:25.868 2025/10/30 [mhttpd1,ERROR] [mhttpd.cxx:15841:mongoose_init,ERROR] Failed to listen on a TCP port enabled in ODB /WebServer
+13:29:25.869 2025/10/30 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+13:31:33.283 2025/10/30 [mhttpd1,LOG] Program mhttpd1 on host localhost started
+13:31:33.283 2025/10/30 [mhttpd1,ERROR] [mhttpd.cxx:15651:mongoose_listen,ERROR] Cannot mg_bind address "localhost:8080"
+13:31:33.283 2025/10/30 [mhttpd1,ERROR] [mhttpd.cxx:15841:mongoose_init,ERROR] Failed to listen on a TCP port enabled in ODB /WebServer
+13:31:33.283 2025/10/30 [mhttpd1,LOG] Program mhttpd1 on host localhost stopped
+13:33:13.531 2025/10/30 [Logger,LOG] Program Logger on host localhost stopped
+13:33:13.618 2025/10/30 [mhttpd,LOG] Program mhttpd on host localhost stopped
+13:34:08.502 2025/10/30 [mhttpd,LOG] Program mhttpd on host localhost started
+13:35:08.268 2025/10/30 [mhttpd,LOG] Program mhttpd on host localhost stopped
+13:35:13.803 2025/10/30 [ODBEdit,INFO] Execute command from command line: "clean"
+13:35:13.815 2025/10/30 [mhttpd,LOG] Program mhttpd on host localhost started
+13:35:15.827 2025/10/30 [Logger,LOG] Program Logger on host localhost started
+13:35:15.829 2025/10/30 [Logger,INFO] Per-variable history is enabled
+13:35:15.829 2025/10/30 [Logger,INFO] Cannot find /Equipment entry in database, history system is inactive
+13:40:00.382 2025/10/30 [Logger,LOG] Program Logger on host localhost stopped
+13:40:01.345 2025/10/30 [mhttpd,LOG] Program mhttpd on host localhost stopped
+13:40:09.598 2025/10/30 [ODBEdit,INFO] Execute command from command line: "clean"
+13:40:09.614 2025/10/30 [mhttpd,LOG] Program mhttpd on host localhost started
+13:40:11.624 2025/10/30 [Logger,LOG] Program Logger on host localhost started
+13:40:11.627 2025/10/30 [Logger,INFO] Per-variable history is enabled
+13:40:11.627 2025/10/30 [Logger,INFO] Cannot find /Equipment entry in database, history system is inactive
+15:52:10.909 2025/11/13 [mhttpd,ERROR] [system.cxx:5331:send_tcp,ERROR] send(socket=0,size=8) returned -1, errno: 88 (Socket operation on non-socket)
+15:52:10.909 2025/11/13 [mhttpd,ERROR] [midas.cxx:13537:rpc_client_call,ERROR] call to "" on "" RPC "id_exit": send_tcp() failed
+16:40:13.289 2025/11/13 [mhttpd,ERROR] [system.cxx:5331:send_tcp,ERROR] send(socket=0,size=8) returned -1, errno: 88 (Socket operation on non-socket)
+16:40:13.289 2025/11/13 [mhttpd,ERROR] [midas.cxx:13537:rpc_client_call,ERROR] call to "" on "" RPC "id_exit": send_tcp() failed

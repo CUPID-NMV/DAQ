@@ -1,0 +1,78 @@
+# *****************************************************************************
+# -----------------------------------------------------------------------------
+# V2495 Scaler Config File
+# -----------------------------------------------------------------------------
+# *****************************************************************************
+# -----------------------------------------------------------------------------
+ChEnableA        00000001
+ChEnableB        00000000
+ChEnableD        00000000
+ChEnableE        00000000
+ChEnableF        00000000
+# -----------------------------------------------------------------------------
+# Counters are reset each time they are readout (0=disabled, 1=enabled)
+# -----------------------------------------------------------------------------
+AutoReset        0
+# -----------------------------------------------------------------------------
+# Trigger Source 
+# 0 = SW only
+# 1 = External + SW
+# 2 = Internal + SW
+# 3 = External + Internal + SW
+# -----------------------------------------------------------------------------
+TriggerMode      3
+# -----------------------------------------------------------------------------
+# Dwell Time (period of the internal trigger) in usec  
+# -----------------------------------------------------------------------------
+DwellTime        1000
+#
+# -----------------------------------------------------------------------------
+# Save time tag in the event data (0=disabled, 1=enabled)
+# Ch_Mask, TimeTag_64 and CVcounter_64 are meaningful only when V2495_Payload is set to 1 
+# -----------------------------------------------------------------------------
+TimeTag          1
+Ch_Mask          1
+TimeTag_64       1
+Counter_64       0
+V2495_Payload    1
+# -----------------------------------------------------------------------------
+# Input Port G1: 
+# 0 = inhibit
+# 1 = counter reset
+# 2 = test
+# -----------------------------------------------------------------------------
+G1Mode           0
+# -----------------------------------------------------------------------------
+# G Ports type: 
+# 0 = NIM
+# 1 = TTL
+# -----------------------------------------------------------------------------
+GPortType        0
+# Daughterboard Input type (only relevant for A395D)
+# All 3 DBs are set to the same input type (each can be set independently using bits [14:12] of the control register)
+# 0 = NIM
+# 1 = TTL
+DBInputType      0
+# -----------------------------------------------------------------------------
+# Enable saving to output File. The file can be chosen at runtime
+# -----------------------------------------------------------------------------
+SaveToFile       0
+# Enable 50 MHz clock output on port C (all channels, can be used to test counters)
+TestClock        1
+# -----------------------------------------------------------------------------
+# Plot Options
+# OpenPlot:   0 = plot disabled;   1 = plot enabled
+# PlotChan: channel to be plotted in the count vs time graph
+# PlotPoints: number of points on the X axis of the plot
+# SWTrigTime: Seconds between two consecutive SW triggers when periodic SW trigger is active (hit 'T' at runtime)
+# PrintCounters: activate the on-screen counter display after each VME access (with "ReadingTime" frequency)
+# ReadingTime: Seconds between two consecutive event data printouts (minimum 1)
+# -----------------------------------------------------------------------------
+OpenPlot         0
+PlotChan         1
+PlotPoints       100
+SWTrigTime       1
+PrintCounters    1
+ReadingTime      1
+
+

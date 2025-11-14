@@ -1,0 +1,18 @@
+  -----------------------------------------------------------------------------
+
+                   --- CAEN SpA - Computing Division ---
+
+  -----------------------------------------------------------------------------
+
+  PLUscaler_daq Release Notes
+
+  -----------------------------------------------------------------------------
+  
+  Rel. 1.4 - October 2024
+  - New packages
+
+  Rel. 1.3 - April 2021
+  - Problems with the data acquisition are now solved
+  - Lost trigger counter added
+  - Some cosmetics 
+  - add support to V4718/V3718 and A4818

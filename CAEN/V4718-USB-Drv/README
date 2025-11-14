@@ -1,0 +1,52 @@
+----------------------------------------------------------------------
+
+              --- CAEN SpA - Computing Systems Division --- 
+
+----------------------------------------------------------------------
+        
+        V4718 USB Driver Readme file
+        
+----------------------------------------------------------------------
+
+        Package for Linux kernels 3.x or greater
+
+        January	 2022
+
+----------------------------------------------------------------------
+
+ The complete documentation can be found in the User's Manual on CAEN's web
+ site at: http://www.caen.it.
+
+
+ Content
+ -------
+
+ Readme.txt		: This file.
+
+ install.sh		: The script file that setup the driver
+ 
+ regPID.sh		: The script file to register the USB V4718 name into PC
+
+
+ System Requirements
+ -------------------
+
+ - Linux kernel with udev
+ 
+ Installation notes
+ ------------------
+
+  To install the V4718 USB driver:
+
+  - Execute: sudo ./install.sh 
+  
+  Some Linux distribution are not able to automatically retrieve the V4718 USB name (V4718-USB-{PIDNUMBER})
+  (you receive an error from your web browser when you try to access the V4718 using its USB name)
+
+  To resolve this issue please connect the V4718 to a PC USB port (the must be only one CAEN device at a time connected!) then:
+  
+  - Execute sudo ./regPID.sh
+  
+  The connected V4718 will be register in your pc.
+  If you have more than one V4718 you have to do the same procedure for each V4718.
+

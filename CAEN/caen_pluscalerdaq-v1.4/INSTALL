@@ -1,0 +1,54 @@
+-----------------------------------------------------------------------------
+
+                    --- CAEN SpA - Software Division ---
+
+-----------------------------------------------------------------------------
+
+    CAEN PLU Scaler demo.
+
+    Install procedure on Linux.
+
+-----------------------------------------------------------------------------
+
+Description
+-----------
+PLUscaler_daq is a program to demonstrate basic funzionalities and event 
+readout from a CAEN V2495 module equipped with scaler firmware.
+
+PLUscaler_daq is back-compatible with V1495 scaler:
+V2495_Payload option in configuration file must be set to 0.
+V1495 scaler doesn't support 64-bit counters and event externsion. 
+Please refer to V2495 documentation for details.
+
+
+Prerequisites
+-------------
+- CAEN_PLULib Library
+- A compiler supporting C99 or C11/C17.
+
+
+Install
+-------
+In the extracted folder run
+
+    $ ./configure
+    $ make
+    $ sudo make install
+
+
+Execute
+-------
+Just launch
+
+    $ PLUscaler_daq [ConfigFile]
+
+A sample config file is installed in "/etc/pluscaler_daq/PLUscaler_Config.txt".
+
+
+How to get support
+------------------
+For technical support, go to https://www.caen.it/mycaen/support/ (login and
+MyCAEN+ account required).
+
+If you don't have an account or want to update your old one, find the instructions
+at https://www.caen.it/support-services/getting-started-with-mycaen-portal/.

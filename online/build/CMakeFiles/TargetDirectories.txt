@@ -1,0 +1,3 @@
+/home/daq/DAQ/online/build/CMakeFiles/cupid_fe.exe.dir
+/home/daq/DAQ/online/build/CMakeFiles/edit_cache.dir
+/home/daq/DAQ/online/build/CMakeFiles/rebuild_cache.dir

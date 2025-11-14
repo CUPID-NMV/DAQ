@@ -1,0 +1,237 @@
+{
+   "/MIDAS version": "2.1",
+   "/filename": "/fname.json",
+   "/ODB path": "/Programs",
+   "ODBEdit": {
+      "Required/key": {
+         "type": 8,
+         "access_mode": 7,
+         "last_written": 1740557719
+      },
+      "Required": false,
+      "Watchdog timeout/key": {
+         "type": 7,
+         "access_mode": 7,
+         "last_written": 1740557719
+      },
+      "Watchdog timeout": 10000,
+      "Check interval/key": {
+         "type": 6,
+         "access_mode": 7,
+         "last_written": 1740557719
+      },
+      "Check interval": "0x0002bf20",
+      "Start command/key": {
+         "type": 12,
+         "item_size": 256,
+         "access_mode": 7,
+         "last_written": 1740557719
+      },
+      "Start command": "/home/daq/packages/midas/bin/odbedit",
+      "Auto start/key": {
+         "type": 8,
+         "access_mode": 7,
+         "last_written": 1740557719
+      },
+      "Auto start": false,
+      "Auto stop/key": {
+         "type": 8,
+         "access_mode": 7,
+         "last_written": 1740557719
+      },
+      "Auto stop": false,
+      "Auto restart/key": {
+         "type": 8,
+         "access_mode": 7,
+         "last_written": 1740557719
+      },
+      "Auto restart": false,
+      "Alarm class/key": {
+         "type": 12,
+         "item_size": 32,
+         "access_mode": 7,
+         "last_written": 1740557719
+      },
+      "Alarm class": "",
+      "First failed/key": {
+         "type": 6,
+         "access_mode": 7,
+         "last_written": 1740557719
+      },
+      "First failed": "0x67becd97"
+   },
+   "mhttpd": {
+      "Required/key": {
+         "type": 8,
+         "access_mode": 7,
+         "last_written": 1741344595
+      },
+      "Required": false,
+      "Watchdog timeout/key": {
+         "type": 7,
+         "access_mode": 7,
+         "last_written": 1741344595
+      },
+      "Watchdog timeout": 10000,
+      "Check interval/key": {
+         "type": 6,
+         "access_mode": 7,
+         "last_written": 1741344595
+      },
+      "Check interval": "0x0002bf20",
+      "Start command/key": {
+         "type": 12,
+         "item_size": 256,
+         "access_mode": 7,
+         "last_written": 1741344595
+      },
+      "Start command": "/home/daq/packages/midas/bin/mhttpd",
+      "Auto start/key": {
+         "type": 8,
+         "access_mode": 7,
+         "last_written": 1741344595
+      },
+      "Auto start": false,
+      "Auto stop/key": {
+         "type": 8,
+         "access_mode": 7,
+         "last_written": 1741344595
+      },
+      "Auto stop": false,
+      "Auto restart/key": {
+         "type": 8,
+         "access_mode": 7,
+         "last_written": 1741344595
+      },
+      "Auto restart": false,
+      "Alarm class/key": {
+         "type": 12,
+         "item_size": 32,
+         "access_mode": 7,
+         "last_written": 1741344595
+      },
+      "Alarm class": "",
+      "First failed/key": {
+         "type": 6,
+         "access_mode": 7,
+         "last_written": 1741344595
+      },
+      "First failed": "0x00000000"
+   },
+   "Sequencer": {
+      "Required/key": {
+         "type": 8,
+         "access_mode": 7,
+         "last_written": 1741344595
+      },
+      "Required": false,
+      "Watchdog timeout/key": {
+         "type": 7,
+         "access_mode": 7,
+         "last_written": 1741344595
+      },
+      "Watchdog timeout": 10000,
+      "Check interval/key": {
+         "type": 6,
+         "access_mode": 7,
+         "last_written": 1741344595
+      },
+      "Check interval": "0x0002bf20",
+      "Start command/key": {
+         "type": 12,
+         "item_size": 256,
+         "access_mode": 7,
+         "last_written": 1741344595
+      },
+      "Start command": "msequencer -D",
+      "Auto start/key": {
+         "type": 8,
+         "access_mode": 7,
+         "last_written": 1741344595
+      },
+      "Auto start": false,
+      "Auto stop/key": {
+         "type": 8,
+         "access_mode": 7,
+         "last_written": 1741344595
+      },
+      "Auto stop": false,
+      "Auto restart/key": {
+         "type": 8,
+         "access_mode": 7,
+         "last_written": 1741344595
+      },
+      "Auto restart": false,
+      "Alarm class/key": {
+         "type": 12,
+         "item_size": 32,
+         "access_mode": 7,
+         "last_written": 1741344595
+      },
+      "Alarm class": "",
+      "First failed/key": {
+         "type": 6,
+         "access_mode": 7,
+         "last_written": 1741344595
+      },
+      "First failed": "0x67cacf53"
+   },
+   "DAQWC": {
+      "Required/key": {
+         "type": 8,
+         "access_mode": 7,
+         "last_written": 1741343686
+      },
+      "Required": false,
+      "Watchdog timeout/key": {
+         "type": 7,
+         "access_mode": 7,
+         "last_written": 1741343686
+      },
+      "Watchdog timeout": 10000,
+      "Check interval/key": {
+         "type": 6,
+         "access_mode": 7,
+         "last_written": 1741343686
+      },
+      "Check interval": "0x0002bf20",
+      "Start command/key": {
+         "type": 12,
+         "item_size": 256,
+         "access_mode": 7,
+         "last_written": 1741344667
+      },
+      "Start command": "/home/daq/packages/DAQ/DAQ_WC/IODemo",
+      "Auto start/key": {
+         "type": 8,
+         "access_mode": 7,
+         "last_written": 1741343686
+      },
+      "Auto start": false,
+      "Auto stop/key": {
+         "type": 8,
+         "access_mode": 7,
+         "last_written": 1741343686
+      },
+      "Auto stop": false,
+      "Auto restart/key": {
+         "type": 8,
+         "access_mode": 7,
+         "last_written": 1741343686
+      },
+      "Auto restart": false,
+      "Alarm class/key": {
+         "type": 12,
+         "item_size": 32,
+         "access_mode": 7,
+         "last_written": 1741343686
+      },
+      "Alarm class": "",
+      "First failed/key": {
+         "type": 6,
+         "access_mode": 7,
+         "last_written": 1741343686
+      },
+      "First failed": "0x67cacbc6"
+   }
+}

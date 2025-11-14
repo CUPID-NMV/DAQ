@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/cupid_fe.exe.dir/cupid_fe_soloV1742.cxx.o -o cupid_fe.exe  /home/daq/packages/midas/lib/libmfe.a -lz -lCAENVME -lCAENDigitizer /home/daq/packages/midas/lib/libmidas.a /usr/lib/x86_64-linux-gnu/libz.so -lcurl -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lz  -lzstd -lssl -lcrypto -lresolv -lm /usr/lib/x86_64-linux-gnu/libsqlite3.so -lutil -lrt -ldl 
