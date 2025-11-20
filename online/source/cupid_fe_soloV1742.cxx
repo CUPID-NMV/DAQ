@@ -359,9 +359,6 @@ INT poll_event(INT source, INT count, BOOL test)
   size = sizeof(double);
   db_get_value(hDB, 0, "/Equipment/Trigger/Statistics/Events sent",&events,&size,TID_DOUBLE,TRUE);
 
-
-  if(maxevents > 0 && events >= maxevents) return 0;
-
   int i;
   DWORD flag;
 
