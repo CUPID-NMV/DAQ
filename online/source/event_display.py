@@ -31,7 +31,7 @@ def plot_waveform(waveform, lenw, pmt, event_number, event_time):
 
     return
 
-def plot_waveform_h(waveform, lenw, pmt, rmin, rmax, event_number, event_time):
+def plot_waveform_h(waveform, lenw, pmt, smin, emax, bmin, tmax, event_number, event_time):
     import numpy as np
     import math
     npx = math.ceil(pmt/2)
@@ -39,19 +39,33 @@ def plot_waveform_h(waveform, lenw, pmt, rmin, rmax, event_number, event_time):
     t = np.linspace(0,lenw, lenw)
     for ipmt in range(pmt):
         plt.subplot(npx, 2, ipmt+1)
-        plt.plot(t[rmin:rmax], waveform[ipmt][rmin:rmax])
+        plt.plot(t[smin:emax], waveform[ipmt][smin:emax])
+        if tmax!=4096 or bmin!=0: 
+            plt.ylim(bmin, tmax)
         plt.ylabel('ch{:d} [mV]'.format(ipmt))
 
     return
 
     
-def main(grid=False, pmt_n=8, rmin=0, rmax=1024, verbose=False):
+def main(grid=False, pmt_n=8, hmin=0, hmax=1024, vmin=0, vmax=4096, verbose=False):
     # Create our client
     client = midas.client.MidasClient("db_display")
     
-    buffer_handle = client.open_event_buffer("SYSTEM",None,1000000000)
+    buffer_handle = client.open_event_buffer("SYSTEM", None, 1000000000)
 
-    request_id = client.register_event_request(buffer_handle, sampling_type = 2)
+    request_id = client.register_event_request(
+       buffer_handle,
+       sampling_type = midas.GET_RECENT
+    )
+
+    # Drop any events that were in the buffer before we started
+    try:
+        midas.bm_skip_event(buffer_handle)
+    except AttributeError:
+    # If your python midas module doesn’t expose bm_skip_event, just ignore
+        pass
+
+    #request_id = client.register_event_request(buffer_handle, sampling_type = 2)
     
     plt.ion()
     fig = plt.figure(figsize=(12,6), facecolor='#DEDEDE')
@@ -96,12 +110,12 @@ def main(grid=False, pmt_n=8, rmin=0, rmax=1024, verbose=False):
                     lenw = waveform_header[2][0]
                     
 
-                    plot_waveform_h(waveform, lenw, pmt_n, rmin, rmax, event_number, event_time)
+                    plot_waveform_h(waveform, lenw, pmt_n, hmin, hmax, vmin, vmax, event_number, event_time)
 
             fig.suptitle ("Event: {:d} at {:s}".format(event_number, event_time))
             fig.canvas.draw()
             fig.canvas.flush_events()
-            time.sleep(0.03)
+            time.sleep(1)
             client.communicate(10)
         except KeyboardInterrupt:
             client.deregister_event_request(buffer_handle, request_id)
@@ -113,19 +127,23 @@ def main(grid=False, pmt_n=8, rmin=0, rmax=1024, verbose=False):
     
 if __name__ == "__main__":
     DEFAULT_PMT_VIEW   = '8'
-    DEFAULT_MIN_VALUE  = '0'
-    DEFAULT_MAX_VALUE  = '1024'
+    DEFAULT_HMIN_VALUE  = '0'
+    DEFAULT_HMAX_VALUE  = '1024'
+    DEFAULT_VMIN_VALUE  = '0'
+    DEFAULT_VMAX_VALUE  = '4096'
     from optparse import OptionParser
     parser = OptionParser(usage='usage: %prog\t ')
     parser.add_option('-g','--grid', dest='grid', action="store_true", default=False, help='grid;');
-    parser.add_option('-n','--min', dest='min', action="store", type="string", default=DEFAULT_MIN_VALUE, help='min [{:s}]'.format(DEFAULT_MIN_VALUE));
-    parser.add_option('-m','--max', dest='max', action="store", type="string", default=DEFAULT_MAX_VALUE, help='max,[{:s}]'.format(DEFAULT_MAX_VALUE));
+    parser.add_option('-s','--hmin', dest='hmin', action="store", type="string", default=DEFAULT_HMIN_VALUE, help='hmin [{:s}]'.format(DEFAULT_HMIN_VALUE));
+    parser.add_option('-e','--hmax', dest='hmax', action="store", type="string", default=DEFAULT_HMAX_VALUE, help='hmax,[{:s}]'.format(DEFAULT_HMAX_VALUE));
+    parser.add_option('-b','--vmin', dest='vmin', action="store", type="string", default=DEFAULT_VMIN_VALUE, help='vmin [{:s}]'.format(DEFAULT_VMIN_VALUE));
+    parser.add_option('-t','--vmax', dest='vmax', action="store", type="string", default=DEFAULT_VMAX_VALUE, help='vmax,[{:s}]'.format(DEFAULT_VMAX_VALUE));
     parser.add_option('-c','--channel', dest='channel', action="store", type="string", default=DEFAULT_PMT_VIEW, help='channel to view [{:s}]'.format(DEFAULT_PMT_VIEW));
 #    parser.add_option('-l','--pmt', dest='pmt', action="store", type="string", default=DEFAULT_PMT_FAST_VALUE, help='show X PMT, where X is the number of channel');		#a bit broken function (do not use it unless you accept risks)
 #    parser.add_option('-y','--y0', dest='y0', action="store", type="string", default=DEFAULT_FRAME_VALUE, help='green frame (pixel) = ' + DEFAULT_FRAME_VALUE);
     parser.add_option('-v','--verbose', dest='verbose', action="store_true", default=False, help='verbose output;');
     (options, args) = parser.parse_args()
-    main(grid=options.grid, pmt_n=int(options.channel),  rmin=int(options.min), rmax=int(options.max), verbose=options.verbose)
+    main(grid=options.grid, pmt_n=int(options.channel), hmin=int(options.hmin), hmax=int(options.hmax), vmin=int(options.vmin), vmax=int(options.vmax), verbose=options.verbose)
 # main()
 
 

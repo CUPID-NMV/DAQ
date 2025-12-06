@@ -3,6 +3,7 @@
 import os
 import subprocess
 from datetime import datetime
+import subprocess
 
 import midas.client
 
@@ -61,10 +62,11 @@ def main() -> int:
         record['start_epoch'] = c.odb_get("/Runinfo/Start time binary")
         record['end_date']    = c.odb_get("/Runinfo/Stop time")
         record['end_epoch']   = c.odb_get("/Runinfo/Stop time binary")
-        record['filename']    = name
         record['bean_status'] = ""
         record['events']      = c.odb_get("/Logger/Channels/0/Statistics/Events written") 
         record['end_description'] = ""
+        record['write']       = c.odb_get("Logger/Write data")
+        record['rucio_status']= -1
 
     except Exception as e:
         print('ERROR: ', e)
@@ -81,7 +83,35 @@ def main() -> int:
     # Costruisci path completo del file
     full_path = os.path.join(data_dir, name)
 
+    log(f"Compressing: {full_path}")
+
+    try:
+        # Adatta la firma di msg() alla tua versione, se necessario
+        c.msg("INFO: Compressing file {:s}".format(full_path))
+    except Exception as e:
+        print('ERROR: ', e)
+        c.disconnect()
+        return 1
+
+    try:
+        result = subprocess.run(
+            ["gzip", full_path],
+            check=True,
+            capture_output=True,
+            text=True
+        )
+        log("Compressione riuscita!")
+    except subprocess.CalledProcessError as e:
+        log("❌ Errore durante la compressione!")
+        log("Return code:", e.returncode)
+        log("Stderr:", e.stderr)
+        return 1
+
     log(f"Uploading: {full_path}")
+    
+    full_path=full_path+".gz"
+    name=name+".gz"
+    record['filename']    = name
 
     try:
         # Adatta la firma di msg() alla tua versione, se necessario
@@ -90,65 +120,73 @@ def main() -> int:
         print('ERROR: ', e)
         c.disconnect()
         return 1
+    if record['write']==1:
+        # Comando docker per RUCIO
+        docker_cmd = [
+            "docker",
+            "run",
+            "--rm",
+            "-v",
+            "/home/.rucio.cfg:/home/.rucio.cfg",
+            "-v",
+            f"{full_path}:/app/{name}",
+            "gmazzitelli/rucio-uploader:v0.2",
+            "--file",
+            f"/app/{name}",
+            "--bucket",
+            "cygno-data",
+            "--did_name",
+            f"NMV/WC/WC25/{name}",
+            "--upload_rse",
+            "CNAF_USERDISK",
+            "--transfer_rse",
+            "T1_USERTAPE",
+            "--account",
+            "rucio-daq",
+        ]
 
-    # Comando docker per RUCIO
-    docker_cmd = [
-        "docker",
-        "run",
-        "--rm",
-        "-v",
-        "/home/.rucio.cfg:/home/.rucio.cfg",
-        "-v",
-        f"{full_path}:/app/{name}",
-        "gmazzitelli/rucio-uploader:v0.2",
-        "--file",
-        f"/app/{name}",
-        "--bucket",
-        "cygno-data",
-        "--did_name",
-        f"WC/{name}",
-        "--upload_rse",
-        "CNAF_USERDISK",
-        "--transfer_rse",
-        "T1_USERTAPE",
-        "--account",
-        "rucio-daq",
-    ]
+        log("Running: " + " ".join(docker_cmd))
 
-    log("Running: " + " ".join(docker_cmd))
+        # Esegui docker e appendi stdout/stderr al log
+        result = subprocess.run(docker_cmd, capture_output=True, text=True)
 
+        #| Exit Code | Meaning                                            |
+        #| --------- | -------------------------------------------------- |
+        #| 0         | Upload and replica created (or both already exist) |
+        #| 1         | File already uploaded, replica just created        |
+        #| 2         | Upload failed                                      |
+        #| 3         | Upload done, replica failed                        |
+        #| 4         | Client configuration error                         |
 
-				#| Exit Code | Meaning                                            |
-				#| --------- | -------------------------------------------------- |
-				#| 0         | Upload and replica created (or both already exist) |
-				#| 1         | File already uploaded, replica just created        |
-				#| 2         | Upload failed                                      |
-				#| 3         | Upload done, replica failed                        |
-				#| 4         | Client configuration error                         |
-
-
-
-    # Esegui docker e appendi stdout/stderr al log
-    result = subprocess.run(docker_cmd, capture_output=True, text=True)
-
-    rucio_status = result.returncode
-    record['rucio_status']=rucio_status
-
-    # Messaggio MIDAS: upload finito
-    try:
-        if (rucio_status==0 or rucio_status==1):
-           c.msg("INFO: RUCIO upload DONE for {:s}".format(full_path))
-        else:
-           c.msg("ERROR: RUCIO upload FAIL for {:s}".format(full_path))
-    except Exception as e:
-        print('ERROR: ', e)
-        c.disconnect()
-        return 1
-    try:
-        add_record(worksheet, HEADER, record)
-    except Exception as e:
-        print('ERROR: ', e)
-        log("ERROR Uploading logbook")
+        rucio_status = result.returncode
+        record['rucio_status']=rucio_status
+    
+        # Messaggio MIDAS: upload finito
+        try:
+            if (rucio_status==0 or rucio_status==1):
+               c.msg("INFO: RUCIO upload DONE for {:s}".format(full_path))
+            else:
+               c.msg("ERROR: RUCIO upload FAIL for {:s}".format(full_path))
+        except Exception as e:
+            print('ERROR: ', e)
+            c.disconnect()
+            return 1
+        try:
+            add_record(worksheet, HEADER, record)
+        except Exception as e:
+            print('ERROR: ', e)
+            log("ERROR Uploading logbook")
+    else:
+        record['description']="none"
+        record['filename']   ="none"
+        record['events']     =0
+#
+# spostato dentro, se qui applica il none.
+#    try:
+#        add_record(worksheet, HEADER, record)
+#    except Exception as e:
+#        print('ERROR: ', e)
+#        log("ERROR Uploading logbook")
 
     c.disconnect()
     return 0
