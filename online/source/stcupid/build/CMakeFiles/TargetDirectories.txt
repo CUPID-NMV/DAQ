@@ -1,0 +1,3 @@
+/home/daq/DAQ/online/source/stcupid/build/CMakeFiles/fe_rtp.dir
+/home/daq/DAQ/online/source/stcupid/build/CMakeFiles/edit_cache.dir
+/home/daq/DAQ/online/source/stcupid/build/CMakeFiles/rebuild_cache.dir
