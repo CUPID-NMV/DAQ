@@ -44,3 +44,6 @@
 packages/
 .env
 *logs/
+*.ipynb_checkpoints/
+*midas.log*
+*.ODB.SHM*

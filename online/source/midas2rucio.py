@@ -38,6 +38,16 @@ def add_record(ws, header_list, record_dict):
     # Inserisce la riga in fondo
     ws.append_row(row)
 
+def append_record_last(ws, headers, record_dict):
+    headers = ensure_headers(ws, headers)
+    row = [record_dict.get(h, "") for h in headers]
+
+    # usa la colonna 1 (A) come riferimento "quante righe piene ci sono"
+    colA = ws.col_values(1)  # include header in riga 1
+    next_row = len(colA) + 1  # dopo l'ultima riga non vuota in col A
+
+    ws.insert_row(row, next_row)
+
 def main() -> int:
 
     HEADER = [
@@ -62,7 +72,7 @@ def main() -> int:
         record['start_epoch'] = c.odb_get("/Runinfo/Start time binary")
         record['end_date']    = c.odb_get("/Runinfo/Stop time")
         record['end_epoch']   = c.odb_get("/Runinfo/Stop time binary")
-        record['bean_status'] = ""
+        record['beam_status'] = ""
         record['events']      = c.odb_get("/Logger/Channels/0/Statistics/Events written") 
         record['end_description'] = ""
         record['write']       = c.odb_get("Logger/Write data")
@@ -130,7 +140,7 @@ def main() -> int:
             "/home/.rucio.cfg:/home/.rucio.cfg",
             "-v",
             f"{full_path}:/app/{name}",
-            "gmazzitelli/rucio-uploader:v0.2",
+            "gmazzitelli/rucio-uploader:v0.3",
             "--file",
             f"/app/{name}",
             "--bucket",
@@ -172,7 +182,7 @@ def main() -> int:
             c.disconnect()
             return 1
         try:
-            add_record(worksheet, HEADER, record)
+            append_record_last(worksheet, HEADER, record)
         except Exception as e:
             print('ERROR: ', e)
             log("ERROR Uploading logbook")

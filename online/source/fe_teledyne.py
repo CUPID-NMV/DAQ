@@ -49,7 +49,7 @@ class MyPeriodicEquipment(midas.frontend.EquipmentBase):
         default_common.buffer_name = "SYSTEM"
         default_common.trigger_mask = 0
         default_common.event_id = 2    # ricodasi di mettere qqiello giusto
-        default_common.period_ms = 100 # WARNING va settato in base al sempling massimo che si vuole ottenere dall'osclloscopio
+        default_common.period_ms = 10  # WARNING va settato in base al sempling massimo che si vuole ottenere dall'osclloscopio
         default_common.read_when = midas.RO_ALWAYS
         default_common.log_history = 0
         
@@ -103,21 +103,21 @@ class MyPeriodicEquipment(midas.frontend.EquipmentBase):
         # dict.
         # print(self.counts)
         self.o.wait_for_single_trigger() # Halt the execution until there is a trigger.
-        for channel in range(1, self.scope_number_of_channels+1):
-            data = self.o.get_waveform(n_channel=channel)
-            if verbose:
-                print(channel, type(data['wavedesc']), data['wavedesc'])
-                print("data:", channel, type(data['waveforms'][0]['Amplitude (V)']), data['waveforms'][0]['Amplitude (V)'])
-                
-            wavedesc = data['wavedesc']  # il tuo dict con TRIGGER_TIME ecc.
+		
+        for channel in range(0, self.scope_number_of_channels + 1):
+            data = self.o.get_waveform(n_channel=channel+1)
+		
+            wavedesc = data["wavedesc"]
             json_str = json.dumps(wavedesc, default=json_default)
             json_bytes = json_str.encode("utf-8")
-
-            event.create_bank("HSCO", midas.TID_BYTE, json_bytes)
-            event.create_bank("DSCO", midas.TID_DOUBLE, data['waveforms'][0]['Amplitude (V)'])
-        
+		
+            event.create_bank(f"HS{channel:02d}", midas.TID_BYTE, json_bytes)
+		
+            amps = data["waveforms"][0]["Amplitude (V)"]  # array/list/numpy
+            event.create_bank(f"DS{channel:02d}", midas.TID_DOUBLE, amps)       
         
         self.set_status("Running")
+        #self.set_all_equipment_status("Running", "greenLight")
         return event
 
 class MyFrontend(midas.frontend.FrontendBase):
