@@ -1,0 +1,9 @@
+Frontend name          :     PLU_v2495
+Event buffer size      :     100000000
+User max event size    :     100000
+User max frag. size    :     5242880
+# of events per buffer :     1000
+
+Connect to experiment WC...
+OK
+Init hardware...

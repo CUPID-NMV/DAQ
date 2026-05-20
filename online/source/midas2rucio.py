@@ -32,7 +32,7 @@ def add_record(ws, header_list, record_dict):
     # Assicura che ci sia la riga di intestazione
     headers = ensure_headers(ws, header_list)
 
-    # Converte il dict in una lista ordinata secondo gli header
+    # Converte il dict in una lista ordinata secondo gli headerrun
     row = [record_dict.get(h, "") for h in headers]
 
     # Inserisce la riga in fondo
@@ -48,20 +48,34 @@ def append_record_last(ws, headers, record_dict):
 
     ws.insert_row(row, next_row)
 
+def reset_run_parameters(client, paths: list):
+    
+    for path in paths:
+        try:
+            client.odb_set(path, -999999)
+            log(f"ODB keys successfully reset: {path}")
+        except Exception as e:
+            log(f"ERROR: Failed to reset ODB key {path}: {e}")
+
 def main() -> int:
 
     HEADER = [
        "run", "description", "start_date", "start_epoch", "filename",
        "beam_status", "end_date", "end_epoch", "events",
-       "end_description", "rucio_status"
+       "end_description", "rucio_status",
+       "angle_A", "angle_B", "mod_A", "mod_B",
+       "x_A", "y_A", "x_B", "y_B",
+       "ch_L_A", "ch_R_A", "ch_L_B", "ch_R_B",
+       "ch_trig", "ch_calo", "notes"
     ]
+
     record = {key: "" for key in HEADER}
     gc = gspread.service_account(filename='/home/.logbook-478712-cffc1d289aa8.json')
-    sh = gc.open_by_key('158Nn7Y59soXvZsv7gih2xP1vzWCiMpzk4hIN6LMxDok')
+    #sh = gc.open_by_key('158Nn7Y59soXvZsv7gih2xP1vzWCiMpzk4hIN6LMxDok') #OLD KEY
+    sh = gc.open_by_key('1EdfueihmdlrPdRGPzOTxER3pWm2c2IO1ddQZU5P7608')
     worksheet = sh.worksheet("log")
 
-
-    # Leggi info da ODB
+        # Leggi info da ODB
     c = midas.client.MidasClient("midas2rucio")
     try:
         name        = c.odb_get("/Logger/Channels/0/Settings/Current filename")
@@ -77,6 +91,22 @@ def main() -> int:
         record['end_description'] = ""
         record['write']       = c.odb_get("Logger/Write data")
         record['rucio_status']= -1
+        record['angle_A'] = c.odb_get("/Experiment/Run Parameters/Angle A")
+        record['angle_B'] = c.odb_get("/Experiment/Run Parameters/Angle B")
+        record['mod_A'] = c.odb_get("/Experiment/Run Parameters/Module A")
+        record['mod_B'] = c.odb_get("/Experiment/Run Parameters/Module B")
+        record['x_A'] = c.odb_get("/Experiment/Run Parameters/xA")
+        record['y_A'] = c.odb_get("/Experiment/Run Parameters/yA")
+        record['x_B'] = c.odb_get("/Experiment/Run Parameters/xB")
+        record['y_B'] = c.odb_get("/Experiment/Run Parameters/yB")
+        record['ch_L_A'] = c.odb_get("/Experiment/Run Parameters/Channel L A")
+        record['ch_R_A'] = c.odb_get("/Experiment/Run Parameters/Channel R A")
+        record['ch_L_B'] = c.odb_get("/Experiment/Run Parameters/Channel L B")
+        record['ch_R_B'] = c.odb_get("/Experiment/Run Parameters/Channel R B")
+        record['ch_trig'] = c.odb_get("/Experiment/Run Parameters/Channel trigger")
+        record['ch_calo'] = c.odb_get("/Experiment/Run Parameters/Channel calorimeter")
+        record['notes'] = c.odb_get("/Experiment/Run Parameters/Notes")
+        
 
     except Exception as e:
         print('ERROR: ', e)
@@ -146,7 +176,7 @@ def main() -> int:
             "--bucket",
             "cygno-data",
             "--did_name",
-            f"NMV/WC/WC25/{name}",
+            f"NMV/WC/WC26/{name}",
             "--upload_rse",
             "CNAF_USERDISK",
             "--transfer_rse",
@@ -197,6 +227,20 @@ def main() -> int:
 #    except Exception as e:
 #        print('ERROR: ', e)
 #        log("ERROR Uploading logbook")
+
+    # ODB keys to reset at the end of the run
+    keys_to_reset = [
+        "/Experiment/Run Parameters/Angle A",
+        "/Experiment/Run Parameters/Angle B",
+        "/Experiment/Run Parameters/Module A",
+        "/Experiment/Run Parameters/Module B",
+        "/Experiment/Run Parameters/xA",
+        "/Experiment/Run Parameters/yA",
+        "/Experiment/Run Parameters/xB",
+        "/Experiment/Run Parameters/yB"
+    ]
+
+    reset_run_parameters(c, keys_to_reset)
 
     c.disconnect()
     return 0

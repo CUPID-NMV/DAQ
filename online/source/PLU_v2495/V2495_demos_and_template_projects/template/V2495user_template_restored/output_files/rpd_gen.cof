@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="US-ASCII" standalone="yes"?>
+<cof>
+	<eprom_name>EPCQ256</eprom_name>
+	<output_filename>output_files/V2495user_template.rpd</output_filename>
+	<n_pages>1</n_pages>
+	<width>1</width>
+	<mode>13</mode>
+	<sof_data>
+		<user_name>Page_0</user_name>
+		<page_flags>1</page_flags>
+		<bit0>
+			<sof_filename>output_files/V2495user_template.pof</sof_filename>
+		</bit0>
+	</sof_data>
+	<version>5</version>
+	<create_cvp_file>0</create_cvp_file>
+	<auto_create_rpd>1</auto_create_rpd>
+	<options>
+		<asp_bin>1</asp_bin>
+	</options>
+</cof>

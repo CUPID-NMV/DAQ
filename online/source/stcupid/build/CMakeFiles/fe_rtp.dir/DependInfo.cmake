@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/daq/DAQ/online/source/stcupid/fe_rtp_multistream.cxx" "CMakeFiles/fe_rtp.dir/fe_rtp_multistream.cxx.o" "gcc" "CMakeFiles/fe_rtp.dir/fe_rtp_multistream.cxx.o.d"
+  "/home/daq/DAQ/online/source/stcupid/fe_rtp_multistream24bit.cxx" "CMakeFiles/fe_rtp.dir/fe_rtp_multistream24bit.cxx.o" "gcc" "CMakeFiles/fe_rtp.dir/fe_rtp_multistream24bit.cxx.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

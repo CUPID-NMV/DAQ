@@ -129,29 +129,29 @@ fe_rtp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fe_rtp.dir/build.make CMakeFiles/fe_rtp.dir/build
 .PHONY : fe_rtp/fast
 
-fe_rtp_multistream.o: fe_rtp_multistream.cxx.o
-.PHONY : fe_rtp_multistream.o
+fe_rtp_multistream24bit.o: fe_rtp_multistream24bit.cxx.o
+.PHONY : fe_rtp_multistream24bit.o
 
 # target to build an object file
-fe_rtp_multistream.cxx.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fe_rtp.dir/build.make CMakeFiles/fe_rtp.dir/fe_rtp_multistream.cxx.o
-.PHONY : fe_rtp_multistream.cxx.o
+fe_rtp_multistream24bit.cxx.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fe_rtp.dir/build.make CMakeFiles/fe_rtp.dir/fe_rtp_multistream24bit.cxx.o
+.PHONY : fe_rtp_multistream24bit.cxx.o
 
-fe_rtp_multistream.i: fe_rtp_multistream.cxx.i
-.PHONY : fe_rtp_multistream.i
+fe_rtp_multistream24bit.i: fe_rtp_multistream24bit.cxx.i
+.PHONY : fe_rtp_multistream24bit.i
 
 # target to preprocess a source file
-fe_rtp_multistream.cxx.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fe_rtp.dir/build.make CMakeFiles/fe_rtp.dir/fe_rtp_multistream.cxx.i
-.PHONY : fe_rtp_multistream.cxx.i
+fe_rtp_multistream24bit.cxx.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fe_rtp.dir/build.make CMakeFiles/fe_rtp.dir/fe_rtp_multistream24bit.cxx.i
+.PHONY : fe_rtp_multistream24bit.cxx.i
 
-fe_rtp_multistream.s: fe_rtp_multistream.cxx.s
-.PHONY : fe_rtp_multistream.s
+fe_rtp_multistream24bit.s: fe_rtp_multistream24bit.cxx.s
+.PHONY : fe_rtp_multistream24bit.s
 
 # target to generate assembly for a file
-fe_rtp_multistream.cxx.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fe_rtp.dir/build.make CMakeFiles/fe_rtp.dir/fe_rtp_multistream.cxx.s
-.PHONY : fe_rtp_multistream.cxx.s
+fe_rtp_multistream24bit.cxx.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fe_rtp.dir/build.make CMakeFiles/fe_rtp.dir/fe_rtp_multistream24bit.cxx.s
+.PHONY : fe_rtp_multistream24bit.cxx.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... fe_rtp"
-	@echo "... fe_rtp_multistream.o"
-	@echo "... fe_rtp_multistream.i"
-	@echo "... fe_rtp_multistream.s"
+	@echo "... fe_rtp_multistream24bit.o"
+	@echo "... fe_rtp_multistream24bit.i"
+	@echo "... fe_rtp_multistream24bit.s"
 .PHONY : help
 
 

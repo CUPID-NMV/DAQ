@@ -1,0 +1,45 @@
+
+State Machine - |V2495_GatePattern|gd_control:I_GD|state
+Name state.read_end state.read0 state.write_end state.write7 state.write4 state.write3 state.write2 state.write1 state.idle 
+state.idle 0 0 0 0 0 0 0 0 0 
+state.write1 0 0 0 0 0 0 0 1 1 
+state.write2 0 0 0 0 0 0 1 0 1 
+state.write3 0 0 0 0 0 1 0 0 1 
+state.write4 0 0 0 0 1 0 0 0 1 
+state.write7 0 0 0 1 0 0 0 0 1 
+state.write_end 0 0 1 0 0 0 0 0 1 
+state.read0 0 1 0 0 0 0 0 0 1 
+state.read_end 1 0 0 0 0 0 0 0 1 
+
+State Machine - |V2495_GatePattern|gd_control:I_GD|spi_interface:I_SPI|state
+Name state.read7 state.read6 state.read5 state.read4 state.read3 state.read2 state.read1 state.read0 state.load_reg_address state.write11 state.write10 state.write9 state.write8 state.write7 state.write6 state.write5 state.write4 state.write3 state.write2 state.write1 state.write0 state.idle 
+state.idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.write0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.write1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.write2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.write3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.write4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.write5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.write6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.write7 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.write8 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.write9 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.write10 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.write11 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.load_reg_address 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.read0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.read1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.read2 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.read3 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.read4 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.read5 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.read6 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.read7 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |V2495_GatePattern|lb_int:I_LBUS_INTERFACE|LBSTATE
+Name LBSTATE.LBREADH LBSTATE.LBREADL LBSTATE.LBWRITEH LBSTATE.LBWRITEL LBSTATE.LBIDLE 
+LBSTATE.LBIDLE 0 0 0 0 0 
+LBSTATE.LBWRITEL 0 0 0 1 1 
+LBSTATE.LBWRITEH 0 0 1 0 1 
+LBSTATE.LBREADL 0 1 0 0 1 
+LBSTATE.LBREADH 1 0 0 0 1 

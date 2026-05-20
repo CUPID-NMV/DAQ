@@ -1,0 +1,80 @@
+[ 33%] Linking CXX executable PLU_v2495_fe.exe
+/usr/bin/ld: /home/daq/packages/midas/lib/libmfe.a(mfe.cxx.o):/home/daq/packages/midas/src/mfe.cxx:58: multiple definition of `hDB'; CMakeFiles/PLU_v2495_fe.exe.dir/PLU_v2495_fe.cxx.o:(.bss+0x78): first defined here
+/usr/bin/ld: /home/daq/packages/midas/lib/libmfe.a(mfe.cxx.o): warning: relocation against `event_buffer_size' in read-only section `.text.startup'
+/usr/bin/ld: /home/daq/packages/midas/lib/libmfe.a(mfe.cxx.o): in function `send_event(int, unsigned int)':
+/home/daq/packages/midas/src/mfe.cxx:1023:(.text+0xd0): undefined reference to `max_event_size'
+/usr/bin/ld: /home/daq/packages/midas/src/mfe.cxx:952:(.text+0x1d2): undefined reference to `max_event_size_frag'
+/usr/bin/ld: /home/daq/packages/midas/src/mfe.cxx:989:(.text+0x257): undefined reference to `max_event_size'
+/usr/bin/ld: /home/daq/packages/midas/lib/libmfe.a(mfe.cxx.o): in function `_readout_thread(void*)':
+/home/daq/packages/midas/src/mfe.cxx:1238:(.text+0x6ca): undefined reference to `max_event_size'
+/usr/bin/ld: /home/daq/packages/midas/lib/libmfe.a(mfe.cxx.o): in function `tr_pause(int, char*)':
+/home/daq/packages/midas/src/mfe.cxx:228:(.text+0xc3c): undefined reference to `display_period'
+/usr/bin/ld: /home/daq/packages/midas/lib/libmfe.a(mfe.cxx.o): in function `register_equipment()':
+/home/daq/packages/midas/src/mfe.cxx:423:(.text+0x120d): undefined reference to `equipment_common_overwrite'
+/usr/bin/ld: /home/daq/packages/midas/src/mfe.cxx:589:(.text+0x1cf3): undefined reference to `max_event_size_frag'
+/usr/bin/ld: /home/daq/packages/midas/lib/libmfe.a(mfe.cxx.o): in function `tr_resume(int, char*)':
+/home/daq/packages/midas/src/mfe.cxx:252:(.text+0x207c): undefined reference to `display_period'
+/usr/bin/ld: /home/daq/packages/midas/lib/libmfe.a(mfe.cxx.o): in function `tr_start(int, char*)':
+/home/daq/packages/midas/src/mfe.cxx:136:(.text+0x23bc): undefined reference to `display_period'
+/usr/bin/ld: /home/daq/packages/midas/lib/libmfe.a(mfe.cxx.o): in function `create_event_rb(int)':
+/home/daq/packages/midas/src/mfe.cxx:1157:(.text+0x2593): undefined reference to `max_event_size'
+/usr/bin/ld: /home/daq/packages/midas/src/mfe.cxx:1157:(.text+0x2599): undefined reference to `event_buffer_size'
+/usr/bin/ld: /home/daq/packages/midas/lib/libmfe.a(mfe.cxx.o): in function `initialize_equipment()':
+/home/daq/packages/midas/src/mfe.cxx:699:(.text+0x27d7): undefined reference to `display_period'
+/usr/bin/ld: /home/daq/packages/midas/src/mfe.cxx:704:(.text+0x2851): undefined reference to `display_period'
+/usr/bin/ld: /home/daq/packages/midas/src/mfe.cxx:699:(.text+0x2d02): undefined reference to `display_period'
+/usr/bin/ld: /home/daq/packages/midas/src/mfe.cxx:704:(.text+0x2d2a): undefined reference to `display_period'
+/usr/bin/ld: /home/daq/packages/midas/lib/libmfe.a(mfe.cxx.o): in function `rotate_wheel()':
+/home/daq/packages/midas/src/mfe.cxx:1509:(.text+0x3836): undefined reference to `display_period'
+/usr/bin/ld: /home/daq/packages/midas/lib/libmfe.a(mfe.cxx.o): in function `tr_stop(int, char*)':
+/home/daq/packages/midas/src/mfe.cxx:1643:(.text+0x3dfb): undefined reference to `max_event_size_frag'
+/usr/bin/ld: /home/daq/packages/midas/src/mfe.cxx:177:(.text+0x3f5a): undefined reference to `display_period'
+/usr/bin/ld: /home/daq/packages/midas/lib/libmfe.a(mfe.cxx.o): in function `check_polled_events':
+/home/daq/packages/midas/src/mfe.cxx:1651:(.text+0x401a): undefined reference to `max_event_size'
+/usr/bin/ld: /home/daq/packages/midas/src/mfe.cxx:1609:(.text+0x40c3): undefined reference to `max_event_size'
+/usr/bin/ld: /home/daq/packages/midas/src/mfe.cxx:1699:(.text+0x41f6): undefined reference to `max_event_size'
+/usr/bin/ld: /home/daq/packages/midas/lib/libmfe.a(mfe.cxx.o): in function `scheduler()':
+/home/daq/packages/midas/src/mfe.cxx:2153:(.text+0x489d): undefined reference to `frontend_call_loop'
+/usr/bin/ld: /home/daq/packages/midas/src/mfe.cxx:2198:(.text+0x491c): undefined reference to `display_period'
+/usr/bin/ld: /home/daq/packages/midas/src/mfe.cxx:2358:(.text+0x4984): undefined reference to `frontend_call_loop'
+/usr/bin/ld: /home/daq/packages/midas/src/mfe.cxx:1964:(.text+0x4a9f): undefined reference to `max_event_size_frag'
+/usr/bin/ld: /home/daq/packages/midas/src/mfe.cxx:1972:(.text+0x4c42): undefined reference to `max_event_size'
+/usr/bin/ld: /home/daq/packages/midas/src/mfe.cxx:1930:(.text+0x4ce3): undefined reference to `max_event_size'
+/usr/bin/ld: /home/daq/packages/midas/src/mfe.cxx:2020:(.text+0x4ea4): undefined reference to `max_event_size'
+/usr/bin/ld: /home/daq/packages/midas/src/mfe.cxx:2254:(.text+0x50fb): undefined reference to `display_period'
+/usr/bin/ld: /home/daq/packages/midas/src/mfe.cxx:2361:(.text+0x519a): undefined reference to `frontend_call_loop'
+/usr/bin/ld: /home/daq/packages/midas/src/mfe.cxx:2275:(.text+0x5814): undefined reference to `display_period'
+/usr/bin/ld: /home/daq/packages/midas/lib/libmfe.a(mfe.cxx.o): in function `main':
+/home/daq/packages/midas/src/mfe.cxx:2538:(.text.startup+0x18a): undefined reference to `max_event_size'
+/usr/bin/ld: /home/daq/packages/midas/src/mfe.cxx:2538:(.text.startup+0x191): undefined reference to `event_buffer_size'
+/usr/bin/ld: /home/daq/packages/midas/lib/libmfe.a(mfe.cxx.o): in function `main':
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:(.text.startup+0x241): undefined reference to `event_buffer_size'
+/usr/bin/ld: /usr/include/x86_64-linux-gnu/bits/stdio2.h:86:(.text.startup+0x25a): undefined reference to `max_event_size'
+/usr/bin/ld: /home/daq/packages/midas/lib/libmfe.a(mfe.cxx.o): in function `main':
+/home/daq/packages/midas/src/mfe.cxx:2581:(.text.startup+0x273): undefined reference to `max_event_size_frag'
+/usr/bin/ld: /home/daq/packages/midas/src/mfe.cxx:2583:(.text.startup+0x290): undefined reference to `event_buffer_size'
+/usr/bin/ld: /home/daq/packages/midas/src/mfe.cxx:2583:(.text.startup+0x2a3): undefined reference to `max_event_size'
+/usr/bin/ld: /home/daq/packages/midas/src/mfe.cxx:2617:(.text.startup+0x4f9): undefined reference to `max_event_size'
+/usr/bin/ld: /home/daq/packages/midas/src/mfe.cxx:2619:(.text.startup+0x724): undefined reference to `max_event_size'
+/usr/bin/ld: /home/daq/packages/midas/src/mfe.cxx:2723:(.text.startup+0x7d6): undefined reference to `display_period'
+/usr/bin/ld: /home/daq/packages/midas/src/mfe.cxx:2707:(.text.startup+0x86a): undefined reference to `display_period'
+/usr/bin/ld: /home/daq/packages/midas/src/mfe.cxx:2714:(.text.startup+0x88b): undefined reference to `display_period'
+/usr/bin/ld: CMakeFiles/PLU_v2495_fe.exe.dir/PLU_v2495_fe.cxx.o: in function `frontend_init()':
+PLU_v2495_fe.cxx:(.text+0x127): undefined reference to `db_check(PLUscalerDescr*)'
+/usr/bin/ld: CMakeFiles/PLU_v2495_fe.exe.dir/PLU_v2495_fe.cxx.o: in function `begin_of_run(int, char*)':
+PLU_v2495_fe.cxx:(.text+0x1ad): undefined reference to `PLUProgram(PLUscalerDescr*)'
+/usr/bin/ld: PLU_v2495_fe.cxx:(.text+0x23c): undefined reference to `PLUResetCounters(PLUscalerDescr)'
+/usr/bin/ld: PLU_v2495_fe.cxx:(.text+0x2cf): undefined reference to `PLUClearData(PLUscalerDescr)'
+/usr/bin/ld: PLU_v2495_fe.cxx:(.text+0x36c): undefined reference to `PLUWriteRegister(PLUscalerDescr, unsigned short, unsigned int)'
+/usr/bin/ld: CMakeFiles/PLU_v2495_fe.exe.dir/PLU_v2495_fe.cxx.o: in function `read_event(char*, int)':
+PLU_v2495_fe.cxx:(.text+0x3ea): undefined reference to `CountEventSize(PLUscalerDescr*)'
+/usr/bin/ld: PLU_v2495_fe.cxx:(.text+0x493): undefined reference to `ReadEvents(PLUscalerDescr, unsigned int*, unsigned int, int*)'
+/usr/bin/ld: CMakeFiles/PLU_v2495_fe.exe.dir/PLU_v2495_fe.cxx.o: in function `end_of_run(int, char*)':
+PLU_v2495_fe.cxx:(.text+0x759): undefined reference to `PLUWriteRegister(PLUscalerDescr, unsigned short, unsigned int)'
+/usr/bin/ld: CMakeFiles/PLU_v2495_fe.exe.dir/PLUscalerLib.c.o: in function `Manual':
+PLUscalerLib.c:(.text+0xcbc): undefined reference to `_getch'
+/usr/bin/ld: warning: creating DT_TEXTREL in a PIE
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/PLU_v2495_fe.exe.dir/build.make:117: PLU_v2495_fe.exe] Error 1
+make[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/PLU_v2495_fe.exe.dir/all] Error 2
+make: *** [Makefile:91: all] Error 2

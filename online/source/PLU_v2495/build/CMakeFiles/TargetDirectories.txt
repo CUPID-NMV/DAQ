@@ -1,0 +1,3 @@
+/home/daq/DAQ/online/source/PLU_v2495/build/CMakeFiles/PLU_v2495_fe.exe.dir
+/home/daq/DAQ/online/source/PLU_v2495/build/CMakeFiles/edit_cache.dir
+/home/daq/DAQ/online/source/PLU_v2495/build/CMakeFiles/rebuild_cache.dir

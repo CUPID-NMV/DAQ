@@ -26,7 +26,7 @@ endif()
 message(STATUS "${PROJECT_NAME}: MIDASSYS: ${MIDASSYS}")
 
 # link against mfe.cxx and mfed.cxx frameworks
-add_executable(cupid_fe.exe cupid_fe_soloV1742.cxx)
+add_executable(cupid_fe.exe cupid_fe_soloV1742_v2.cxx)
 
 target_link_libraries(cupid_fe.exe midas::mfe z CAENVME CAENDigitizer)
 

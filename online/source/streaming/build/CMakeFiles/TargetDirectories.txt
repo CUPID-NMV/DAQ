@@ -1,0 +1,3 @@
+/home/daq/DAQ/online/source/streaming/build/CMakeFiles/streaming_test_fe.dir
+/home/daq/DAQ/online/source/streaming/build/CMakeFiles/edit_cache.dir
+/home/daq/DAQ/online/source/streaming/build/CMakeFiles/rebuild_cache.dir

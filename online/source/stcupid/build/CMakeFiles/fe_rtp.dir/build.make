@@ -69,28 +69,28 @@ include CMakeFiles/fe_rtp.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/fe_rtp.dir/flags.make
 
-CMakeFiles/fe_rtp.dir/fe_rtp_multistream.cxx.o: CMakeFiles/fe_rtp.dir/flags.make
-CMakeFiles/fe_rtp.dir/fe_rtp_multistream.cxx.o: /home/daq/DAQ/online/source/stcupid/fe_rtp_multistream.cxx
-CMakeFiles/fe_rtp.dir/fe_rtp_multistream.cxx.o: CMakeFiles/fe_rtp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/daq/DAQ/online/source/stcupid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/fe_rtp.dir/fe_rtp_multistream.cxx.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fe_rtp.dir/fe_rtp_multistream.cxx.o -MF CMakeFiles/fe_rtp.dir/fe_rtp_multistream.cxx.o.d -o CMakeFiles/fe_rtp.dir/fe_rtp_multistream.cxx.o -c /home/daq/DAQ/online/source/stcupid/fe_rtp_multistream.cxx
+CMakeFiles/fe_rtp.dir/fe_rtp_multistream24bit.cxx.o: CMakeFiles/fe_rtp.dir/flags.make
+CMakeFiles/fe_rtp.dir/fe_rtp_multistream24bit.cxx.o: /home/daq/DAQ/online/source/stcupid/fe_rtp_multistream24bit.cxx
+CMakeFiles/fe_rtp.dir/fe_rtp_multistream24bit.cxx.o: CMakeFiles/fe_rtp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/daq/DAQ/online/source/stcupid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/fe_rtp.dir/fe_rtp_multistream24bit.cxx.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fe_rtp.dir/fe_rtp_multistream24bit.cxx.o -MF CMakeFiles/fe_rtp.dir/fe_rtp_multistream24bit.cxx.o.d -o CMakeFiles/fe_rtp.dir/fe_rtp_multistream24bit.cxx.o -c /home/daq/DAQ/online/source/stcupid/fe_rtp_multistream24bit.cxx
 
-CMakeFiles/fe_rtp.dir/fe_rtp_multistream.cxx.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/fe_rtp.dir/fe_rtp_multistream.cxx.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/daq/DAQ/online/source/stcupid/fe_rtp_multistream.cxx > CMakeFiles/fe_rtp.dir/fe_rtp_multistream.cxx.i
+CMakeFiles/fe_rtp.dir/fe_rtp_multistream24bit.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/fe_rtp.dir/fe_rtp_multistream24bit.cxx.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/daq/DAQ/online/source/stcupid/fe_rtp_multistream24bit.cxx > CMakeFiles/fe_rtp.dir/fe_rtp_multistream24bit.cxx.i
 
-CMakeFiles/fe_rtp.dir/fe_rtp_multistream.cxx.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/fe_rtp.dir/fe_rtp_multistream.cxx.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/daq/DAQ/online/source/stcupid/fe_rtp_multistream.cxx -o CMakeFiles/fe_rtp.dir/fe_rtp_multistream.cxx.s
+CMakeFiles/fe_rtp.dir/fe_rtp_multistream24bit.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/fe_rtp.dir/fe_rtp_multistream24bit.cxx.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/daq/DAQ/online/source/stcupid/fe_rtp_multistream24bit.cxx -o CMakeFiles/fe_rtp.dir/fe_rtp_multistream24bit.cxx.s
 
 # Object files for target fe_rtp
 fe_rtp_OBJECTS = \
-"CMakeFiles/fe_rtp.dir/fe_rtp_multistream.cxx.o"
+"CMakeFiles/fe_rtp.dir/fe_rtp_multistream24bit.cxx.o"
 
 # External object files for target fe_rtp
 fe_rtp_EXTERNAL_OBJECTS =
 
-fe_rtp: CMakeFiles/fe_rtp.dir/fe_rtp_multistream.cxx.o
+fe_rtp: CMakeFiles/fe_rtp.dir/fe_rtp_multistream24bit.cxx.o
 fe_rtp: CMakeFiles/fe_rtp.dir/build.make
 fe_rtp: /home/daq/packages/midas/lib/libmfe.a
 fe_rtp: /home/daq/packages/midas/lib/libmidas.a

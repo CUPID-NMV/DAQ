@@ -85,8 +85,8 @@ def main(grid=False, pmt_n=4, hmin=0, hmax=1024, vmin=0, vmax=4096, verbose=Fals
             bank_names = ", ".join(b.name for b in event.banks.values())
             event_number = event.header.serial_number
             event_time = datetime.fromtimestamp(event.header.timestamp).strftime('%Y-%m-%d %H:%M:%S')
-            corrected = client.odb_get("/Configurations/DRS4Correction")
-            channels_offset = client.odb_get("/Configurations/DigitizerOffset")
+#            corrected = client.odb_get("/Configurations/DRS4Correction")
+#            channels_offset = client.odb_get("/Configurations/DigitizerOffset")
 
             if verbose:
                 print("Event # %s of type ID %s contains banks %s" % (event_number, event.header.event_id, bank_names))
@@ -98,7 +98,7 @@ def main(grid=False, pmt_n=4, hmin=0, hmax=1024, vmin=0, vmax=4096, verbose=Fals
 
 
             for bank_name, bank in event.banks.items():
-                if bank_name=='HS00': 
+                if bank_name=='HS00' and pmt_n>=1: 
                     hd = json.loads(bytes(event.banks['HS00'].data).decode("utf-8"))
                     tw = np.asarray(event.banks['DS00'].data, dtype=np.float64)
                     lenw=int(hd['WAVE_ARRAY_COUNT'])
@@ -107,19 +107,19 @@ def main(grid=False, pmt_n=4, hmin=0, hmax=1024, vmin=0, vmax=4096, verbose=Fals
                     waveform=np.zeros((pmt_n,lenw), dtype=np.float64)
                     if len(tw)>0:
                         waveform[0]=tw
-                if bank_name=='HS01': 
+                if bank_name=='HS01' and pmt_n>=2: 
                     hd = json.loads(bytes(event.banks['HS01'].data).decode("utf-8"))
                     tw = np.asarray(event.banks['DS01'].data, dtype=np.float64)
                     lenw=int(hd['WAVE_ARRAY_COUNT'])
                     if len(tw)>0:
                         waveform[1]=tw
-                if bank_name=='HS02': 			
+                if bank_name=='HS02' and pmt_n>=3: 			
                     hd = json.loads(bytes(event.banks['HS02'].data).decode("utf-8"))
                     tw = np.asarray(event.banks['DS02'].data, dtype=np.float64)
                     lenw=int(hd['WAVE_ARRAY_COUNT'])
                     if len(tw)>0:
                         waveform[2]=tw
-                if bank_name=='HS03': 
+                if bank_name=='HS03' and pmt_n==4: 
                     hd = json.loads(bytes(event.banks['HS03'].data).decode("utf-8"))
                     tw = np.asarray(event.banks['DS03'].data, dtype=np.float64)
                     lenw=int(hd['WAVE_ARRAY_COUNT'])

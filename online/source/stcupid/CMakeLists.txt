@@ -7,6 +7,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 #
 # Find MIDAS (same logic as your example)
 #
+# mkdir -p build
+# cd build
+# cmake .. -DCMAKE_BUILD_TYPE=Release
+# cmake --build . -j
+
 if (NO_MIDAS)
   message(STATUS "${PROJECT_NAME}: MIDAS support is disabled via NO_MIDAS")
   unset(MIDAS_FOUND)
@@ -36,7 +41,7 @@ endif()
 # Build the frontend
 #
 add_executable(fe_rtp
-  fe_rtp_multistream.cxx
+  fe_rtp_multistream24bit.cxx
 )
 
 # Some MIDAS builds require these defines; harmless if not used.

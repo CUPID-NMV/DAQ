@@ -1,0 +1,793 @@
+Analysis & Synthesis report for V2495_GatePattern
+Wed May 20 10:14:16 2026
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |V2495_GatePattern|gd_control:I_GD|state
+  9. State Machine - |V2495_GatePattern|gd_control:I_GD|spi_interface:I_SPI|state
+ 10. State Machine - |V2495_GatePattern|lb_int:I_LBUS_INTERFACE|LBSTATE
+ 11. Registers Removed During Synthesis
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Parameter Settings for User Entity Instance: gd_control:I_GD|spi_interface:I_SPI|spi_master:spi_core
+ 17. Port Connectivity Checks: "gd_control:I_GD|spi_interface:I_SPI|spi_master:spi_core"
+ 18. Port Connectivity Checks: "gatep:I_GATEP"
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                 ;
++---------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed May 20 10:14:16 2026      ;
+; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                   ; V2495_GatePattern                          ;
+; Top-level Entity Name           ; V2495_GatePattern                          ;
+; Family                          ; Cyclone V                                  ;
+; Logic utilization (in ALMs)     ; N/A                                        ;
+; Total registers                 ; 665                                        ;
+; Total pins                      ; 312                                        ;
+; Total virtual pins              ; 0                                          ;
+; Total block memory bits         ; 0                                          ;
+; Total DSP Blocks                ; 0                                          ;
+; Total HSSI RX PCSs              ; 0                                          ;
+; Total HSSI PMA RX Deserializers ; 0                                          ;
+; Total HSSI TX PCSs              ; 0                                          ;
+; Total HSSI TX Channels          ; 0                                          ;
+; Total PLLs                      ; 0                                          ;
+; Total DLLs                      ; 0                                          ;
++---------------------------------+--------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGXBC4C6F27C7     ;                    ;
+; Top-level entity name                                                           ; V2495_GatePattern  ; V2495_GatePattern  ;
+; Family name                                                                     ; Cyclone V          ; Cyclone IV GX      ;
+; Use smart compilation                                                           ; On                 ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization                                                    ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Synthesis Seed                                                                  ; 1                  ; 1                  ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 16     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                            ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                                     ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; src/V2495_package.vhd            ; yes             ; User VHDL File  ; /home/daq/DAQ/online/source/PLU_v2495/V2495_demos_and_template_projects/custom_gate_pattern/V2495_GatePattern_restored/src/V2495_package.vhd     ;         ;
+; src/spi_master.vhd               ; yes             ; User VHDL File  ; /home/daq/DAQ/online/source/PLU_v2495/V2495_demos_and_template_projects/custom_gate_pattern/V2495_GatePattern_restored/src/spi_master.vhd        ;         ;
+; src/spi_interface.vhd            ; yes             ; User VHDL File  ; /home/daq/DAQ/online/source/PLU_v2495/V2495_demos_and_template_projects/custom_gate_pattern/V2495_GatePattern_restored/src/spi_interface.vhd     ;         ;
+; src/gd_control.vhd               ; yes             ; User VHDL File  ; /home/daq/DAQ/online/source/PLU_v2495/V2495_demos_and_template_projects/custom_gate_pattern/V2495_GatePattern_restored/src/gd_control.vhd        ;         ;
+; src/V2495_GatePattern.vhd        ; yes             ; User VHDL File  ; /home/daq/DAQ/online/source/PLU_v2495/V2495_demos_and_template_projects/custom_gate_pattern/V2495_GatePattern_restored/src/V2495_GatePattern.vhd ;         ;
+; src/lb_int.vhd                   ; yes             ; User VHDL File  ; /home/daq/DAQ/online/source/PLU_v2495/V2495_demos_and_template_projects/custom_gate_pattern/V2495_GatePattern_restored/src/lb_int.vhd            ;         ;
+; src/gatep.vhd                    ; yes             ; User VHDL File  ; /home/daq/DAQ/online/source/PLU_v2495/V2495_demos_and_template_projects/custom_gate_pattern/V2495_GatePattern_restored/src/gatep.vhd             ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 429       ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 399       ;
+;     -- 7 input functions                    ; 6         ;
+;     -- 6 input functions                    ; 138       ;
+;     -- 5 input functions                    ; 69        ;
+;     -- 4 input functions                    ; 65        ;
+;     -- <=3 input functions                  ; 121       ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 665       ;
+;                                             ;           ;
+; I/O pins                                    ; 312       ;
+; Total DSP Blocks                            ; 0         ;
+; Maximum fan-out node                        ; CLK~input ;
+; Maximum fan-out                             ; 659       ;
+; Total fan-out                               ; 4526      ;
+; Average fan-out                             ; 2.51      ;
++---------------------------------------------+-----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                  ;
++--------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node     ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                        ; Library Name ;
++--------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------+--------------+
+; |V2495_GatePattern             ; 399 (1)           ; 665 (0)      ; 0                 ; 0          ; 312  ; 0            ; |V2495_GatePattern                                                         ; work         ;
+;    |gatep:I_GATEP|             ; 45 (45)           ; 38 (38)      ; 0                 ; 0          ; 0    ; 0            ; |V2495_GatePattern|gatep:I_GATEP                                           ; work         ;
+;    |gd_control:I_GD|           ; 145 (80)          ; 332 (112)    ; 0                 ; 0          ; 0    ; 0            ; |V2495_GatePattern|gd_control:I_GD                                         ; work         ;
+;       |spi_interface:I_SPI|    ; 65 (33)           ; 220 (107)    ; 0                 ; 0          ; 0    ; 0            ; |V2495_GatePattern|gd_control:I_GD|spi_interface:I_SPI                     ; work         ;
+;          |spi_master:spi_core| ; 32 (32)           ; 113 (113)    ; 0                 ; 0          ; 0    ; 0            ; |V2495_GatePattern|gd_control:I_GD|spi_interface:I_SPI|spi_master:spi_core ; work         ;
+;    |lb_int:I_LBUS_INTERFACE|   ; 208 (208)         ; 295 (295)    ; 0                 ; 0          ; 0    ; 0            ; |V2495_GatePattern|lb_int:I_LBUS_INTERFACE                                 ; work         ;
++--------------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |V2495_GatePattern|gd_control:I_GD|state                                                                                                 ;
++-----------------+----------------+-------------+-----------------+--------------+--------------+--------------+--------------+--------------+------------+
+; Name            ; state.read_end ; state.read0 ; state.write_end ; state.write7 ; state.write4 ; state.write3 ; state.write2 ; state.write1 ; state.idle ;
++-----------------+----------------+-------------+-----------------+--------------+--------------+--------------+--------------+--------------+------------+
+; state.idle      ; 0              ; 0           ; 0               ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ;
+; state.write1    ; 0              ; 0           ; 0               ; 0            ; 0            ; 0            ; 0            ; 1            ; 1          ;
+; state.write2    ; 0              ; 0           ; 0               ; 0            ; 0            ; 0            ; 1            ; 0            ; 1          ;
+; state.write3    ; 0              ; 0           ; 0               ; 0            ; 0            ; 1            ; 0            ; 0            ; 1          ;
+; state.write4    ; 0              ; 0           ; 0               ; 0            ; 1            ; 0            ; 0            ; 0            ; 1          ;
+; state.write7    ; 0              ; 0           ; 0               ; 1            ; 0            ; 0            ; 0            ; 0            ; 1          ;
+; state.write_end ; 0              ; 0           ; 1               ; 0            ; 0            ; 0            ; 0            ; 0            ; 1          ;
+; state.read0     ; 0              ; 1           ; 0               ; 0            ; 0            ; 0            ; 0            ; 0            ; 1          ;
+; state.read_end  ; 1              ; 0           ; 0               ; 0            ; 0            ; 0            ; 0            ; 0            ; 1          ;
++-----------------+----------------+-------------+-----------------+--------------+--------------+--------------+--------------+--------------+------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |V2495_GatePattern|gd_control:I_GD|spi_interface:I_SPI|state                                                                                                                                                                                                                                                                                       ;
++------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+------------------------+---------------+---------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+------------+
+; Name                   ; state.read7 ; state.read6 ; state.read5 ; state.read4 ; state.read3 ; state.read2 ; state.read1 ; state.read0 ; state.load_reg_address ; state.write11 ; state.write10 ; state.write9 ; state.write8 ; state.write7 ; state.write6 ; state.write5 ; state.write4 ; state.write3 ; state.write2 ; state.write1 ; state.write0 ; state.idle ;
++------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+------------------------+---------------+---------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+------------+
+; state.idle             ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                      ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0          ;
+; state.write0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                      ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 1          ;
+; state.write1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                      ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 1          ;
+; state.write2           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                      ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 1          ;
+; state.write3           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                      ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 1          ;
+; state.write4           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                      ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 1          ;
+; state.write5           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                      ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1          ;
+; state.write6           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                      ; 0             ; 0             ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1          ;
+; state.write7           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                      ; 0             ; 0             ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1          ;
+; state.write8           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                      ; 0             ; 0             ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1          ;
+; state.write9           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                      ; 0             ; 0             ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1          ;
+; state.write10          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                      ; 0             ; 1             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1          ;
+; state.write11          ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                      ; 1             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1          ;
+; state.load_reg_address ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1                      ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1          ;
+; state.read0            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0                      ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1          ;
+; state.read1            ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0                      ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1          ;
+; state.read2            ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0                      ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1          ;
+; state.read3            ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0                      ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1          ;
+; state.read4            ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0                      ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1          ;
+; state.read5            ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                      ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1          ;
+; state.read6            ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                      ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1          ;
+; state.read7            ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                      ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1          ;
++------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+------------------------+---------------+---------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------+
+; State Machine - |V2495_GatePattern|lb_int:I_LBUS_INTERFACE|LBSTATE                                          ;
++------------------+-----------------+-----------------+------------------+------------------+----------------+
+; Name             ; LBSTATE.LBREADH ; LBSTATE.LBREADL ; LBSTATE.LBWRITEH ; LBSTATE.LBWRITEL ; LBSTATE.LBIDLE ;
++------------------+-----------------+-----------------+------------------+------------------+----------------+
+; LBSTATE.LBIDLE   ; 0               ; 0               ; 0                ; 0                ; 0              ;
+; LBSTATE.LBWRITEL ; 0               ; 0               ; 0                ; 1                ; 1              ;
+; LBSTATE.LBWRITEH ; 0               ; 0               ; 1                ; 0                ; 1              ;
+; LBSTATE.LBREADL  ; 0               ; 1               ; 0                ; 0                ; 1              ;
+; LBSTATE.LBREADH  ; 1               ; 0               ; 0                ; 0                ; 1              ;
++------------------+-----------------+-----------------+------------------+------------------+----------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                      ;
++------------------------------------------------------------------------+--------------------------------------------------------------------------------+
+; Register name                                                          ; Reason for Removal                                                             ;
++------------------------------------------------------------------------+--------------------------------------------------------------------------------+
+; gatep:I_GATEP|captd[0][1]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[0][2]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[0][3]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[0][4]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[0][5]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[0][6]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[0][7]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[0][8]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[0][9]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[0][10]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[0][11]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[0][12]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[0][13]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[0][14]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[0][15]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[0][16]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[0][17]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[0][18]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[0][19]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[0][20]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[0][21]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[0][22]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[0][23]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[0][24]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[0][25]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[0][26]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[0][27]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[0][28]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[0][29]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[0][30]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[0][31]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[1][1]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[1][2]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[1][3]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[1][4]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[1][5]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[1][6]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[1][7]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[1][8]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[1][9]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[1][10]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[1][11]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[1][12]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[1][13]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[1][14]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[1][15]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[1][16]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[1][17]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[1][18]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[1][19]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[1][20]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[1][21]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[1][22]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[1][23]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[1][24]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[1][25]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[1][26]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[1][27]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[1][28]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[1][29]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[1][30]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[1][31]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[2][1]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[2][2]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[2][3]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[2][4]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[2][5]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[2][6]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[2][7]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[2][8]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[2][9]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[2][10]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[2][11]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[2][12]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[2][13]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[2][14]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[2][15]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[2][16]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[2][17]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[2][18]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[2][19]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[2][20]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[2][21]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[2][22]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[2][23]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[2][24]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[2][25]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[2][26]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[2][27]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[2][28]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[2][29]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[2][30]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[2][31]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[3][1]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[3][2]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[3][3]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[3][4]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[3][5]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[3][6]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[3][7]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[3][8]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[3][9]                                              ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[3][10]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[3][11]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[3][12]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[3][13]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[3][14]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[3][15]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[3][16]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[3][17]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[3][18]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[3][19]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[3][20]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[3][21]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[3][22]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[3][23]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[3][24]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[3][25]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[3][26]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[3][27]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[3][28]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[3][29]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[3][30]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gatep:I_GATEP|captd[3][31]                                             ; Stuck at GND due to stuck port clock                                           ;
+; gd_control:I_GD|spi_interface:I_SPI|spi_master:spi_core|core_clk       ; Merged with gd_control:I_GD|spi_interface:I_SPI|spi_master:spi_core|core_n_clk ;
+; gd_control:I_GD|spi_interface:I_SPI|command[1..14]                     ; Stuck at GND due to stuck port data_in                                         ;
+; gd_control:I_GD|spi_address[8..11]                                     ; Stuck at GND due to stuck port data_in                                         ;
+; gd_control:I_GD|spi_interface:I_SPI|int_reg_address[8..11]             ; Stuck at GND due to stuck port data_in                                         ;
+; gd_control:I_GD|spi_data_write[16..31]                                 ; Stuck at GND due to stuck port data_in                                         ;
+; gd_control:I_GD|spi_interface:I_SPI|int_reg_data[16..31]               ; Stuck at GND due to stuck port data_in                                         ;
+; gd_control:I_GD|spi_interface:I_SPI|di_i[17..30]                       ; Stuck at GND due to stuck port data_in                                         ;
+; gd_control:I_GD|spi_interface:I_SPI|spi_master:spi_core|di_reg[17..30] ; Stuck at GND due to stuck port data_in                                         ;
+; gd_control:I_GD|spi_interface:I_SPI|state.read7                        ; Stuck at GND due to stuck port data_in                                         ;
+; Total Number of Removed Registers = 208                                ;                                                                                ;
++------------------------------------------------------------------------+--------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                      ;
++-------------------------------------------------+---------------------------+--------------------------------------------------------------------+
+; Register name                                   ; Reason for Removal        ; Registers Removed due to This Register                             ;
++-------------------------------------------------+---------------------------+--------------------------------------------------------------------+
+; gd_control:I_GD|spi_interface:I_SPI|command[14] ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|di_i[30],                      ;
+;                                                 ; due to stuck port data_in ; gd_control:I_GD|spi_interface:I_SPI|spi_master:spi_core|di_reg[30] ;
+; gd_control:I_GD|spi_interface:I_SPI|command[13] ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|di_i[29],                      ;
+;                                                 ; due to stuck port data_in ; gd_control:I_GD|spi_interface:I_SPI|spi_master:spi_core|di_reg[29] ;
+; gd_control:I_GD|spi_interface:I_SPI|command[12] ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|di_i[28],                      ;
+;                                                 ; due to stuck port data_in ; gd_control:I_GD|spi_interface:I_SPI|spi_master:spi_core|di_reg[28] ;
+; gd_control:I_GD|spi_interface:I_SPI|command[11] ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|di_i[27],                      ;
+;                                                 ; due to stuck port data_in ; gd_control:I_GD|spi_interface:I_SPI|spi_master:spi_core|di_reg[27] ;
+; gd_control:I_GD|spi_interface:I_SPI|command[10] ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|di_i[26],                      ;
+;                                                 ; due to stuck port data_in ; gd_control:I_GD|spi_interface:I_SPI|spi_master:spi_core|di_reg[26] ;
+; gd_control:I_GD|spi_interface:I_SPI|command[9]  ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|di_i[25],                      ;
+;                                                 ; due to stuck port data_in ; gd_control:I_GD|spi_interface:I_SPI|spi_master:spi_core|di_reg[25] ;
+; gd_control:I_GD|spi_interface:I_SPI|command[8]  ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|di_i[24],                      ;
+;                                                 ; due to stuck port data_in ; gd_control:I_GD|spi_interface:I_SPI|spi_master:spi_core|di_reg[24] ;
+; gd_control:I_GD|spi_interface:I_SPI|command[7]  ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|di_i[23],                      ;
+;                                                 ; due to stuck port data_in ; gd_control:I_GD|spi_interface:I_SPI|spi_master:spi_core|di_reg[23] ;
+; gd_control:I_GD|spi_interface:I_SPI|command[6]  ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|di_i[22],                      ;
+;                                                 ; due to stuck port data_in ; gd_control:I_GD|spi_interface:I_SPI|spi_master:spi_core|di_reg[22] ;
+; gd_control:I_GD|spi_interface:I_SPI|command[5]  ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|di_i[21],                      ;
+;                                                 ; due to stuck port data_in ; gd_control:I_GD|spi_interface:I_SPI|spi_master:spi_core|di_reg[21] ;
+; gd_control:I_GD|spi_interface:I_SPI|command[4]  ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|di_i[20],                      ;
+;                                                 ; due to stuck port data_in ; gd_control:I_GD|spi_interface:I_SPI|spi_master:spi_core|di_reg[20] ;
+; gd_control:I_GD|spi_interface:I_SPI|command[3]  ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|di_i[19],                      ;
+;                                                 ; due to stuck port data_in ; gd_control:I_GD|spi_interface:I_SPI|spi_master:spi_core|di_reg[19] ;
+; gd_control:I_GD|spi_interface:I_SPI|command[2]  ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|di_i[18],                      ;
+;                                                 ; due to stuck port data_in ; gd_control:I_GD|spi_interface:I_SPI|spi_master:spi_core|di_reg[18] ;
+; gd_control:I_GD|spi_interface:I_SPI|command[1]  ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|di_i[17],                      ;
+;                                                 ; due to stuck port data_in ; gd_control:I_GD|spi_interface:I_SPI|spi_master:spi_core|di_reg[17] ;
+; gd_control:I_GD|spi_address[8]                  ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|int_reg_address[8]             ;
+;                                                 ; due to stuck port data_in ;                                                                    ;
+; gd_control:I_GD|spi_address[9]                  ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|int_reg_address[9]             ;
+;                                                 ; due to stuck port data_in ;                                                                    ;
+; gd_control:I_GD|spi_address[10]                 ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|int_reg_address[10]            ;
+;                                                 ; due to stuck port data_in ;                                                                    ;
+; gd_control:I_GD|spi_address[11]                 ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|int_reg_address[11]            ;
+;                                                 ; due to stuck port data_in ;                                                                    ;
+; gd_control:I_GD|spi_data_write[31]              ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|int_reg_data[31]               ;
+;                                                 ; due to stuck port data_in ;                                                                    ;
+; gd_control:I_GD|spi_data_write[30]              ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|int_reg_data[30]               ;
+;                                                 ; due to stuck port data_in ;                                                                    ;
+; gd_control:I_GD|spi_data_write[29]              ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|int_reg_data[29]               ;
+;                                                 ; due to stuck port data_in ;                                                                    ;
+; gd_control:I_GD|spi_data_write[28]              ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|int_reg_data[28]               ;
+;                                                 ; due to stuck port data_in ;                                                                    ;
+; gd_control:I_GD|spi_data_write[27]              ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|int_reg_data[27]               ;
+;                                                 ; due to stuck port data_in ;                                                                    ;
+; gd_control:I_GD|spi_data_write[26]              ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|int_reg_data[26]               ;
+;                                                 ; due to stuck port data_in ;                                                                    ;
+; gd_control:I_GD|spi_data_write[25]              ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|int_reg_data[25]               ;
+;                                                 ; due to stuck port data_in ;                                                                    ;
+; gd_control:I_GD|spi_data_write[24]              ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|int_reg_data[24]               ;
+;                                                 ; due to stuck port data_in ;                                                                    ;
+; gd_control:I_GD|spi_data_write[16]              ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|int_reg_data[16]               ;
+;                                                 ; due to stuck port data_in ;                                                                    ;
+; gd_control:I_GD|spi_data_write[17]              ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|int_reg_data[17]               ;
+;                                                 ; due to stuck port data_in ;                                                                    ;
+; gd_control:I_GD|spi_data_write[18]              ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|int_reg_data[18]               ;
+;                                                 ; due to stuck port data_in ;                                                                    ;
+; gd_control:I_GD|spi_data_write[19]              ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|int_reg_data[19]               ;
+;                                                 ; due to stuck port data_in ;                                                                    ;
+; gd_control:I_GD|spi_data_write[20]              ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|int_reg_data[20]               ;
+;                                                 ; due to stuck port data_in ;                                                                    ;
+; gd_control:I_GD|spi_data_write[21]              ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|int_reg_data[21]               ;
+;                                                 ; due to stuck port data_in ;                                                                    ;
+; gd_control:I_GD|spi_data_write[22]              ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|int_reg_data[22]               ;
+;                                                 ; due to stuck port data_in ;                                                                    ;
+; gd_control:I_GD|spi_data_write[23]              ; Stuck at GND              ; gd_control:I_GD|spi_interface:I_SPI|int_reg_data[23]               ;
+;                                                 ; due to stuck port data_in ;                                                                    ;
++-------------------------------------------------+---------------------------+--------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 665   ;
+; Number of registers using Synchronous Clear  ; 29    ;
+; Number of registers using Synchronous Load   ; 65    ;
+; Number of registers using Asynchronous Clear ; 249   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 576   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                   ;
++----------------------------------------------------------------------+---------+
+; Inverted Register                                                    ; Fan out ;
++----------------------------------------------------------------------+---------+
+; lb_int:I_LBUS_INTERFACE|nREADY                                       ; 2       ;
+; gd_control:I_GD|spi_interface:I_SPI|spi_master:spi_core|core_n_clk   ; 4       ;
+; gd_control:I_GD|spi_interface:I_SPI|spi_master:spi_core|core_n_ce    ; 9       ;
+; gd_control:I_GD|spi_interface:I_SPI|spi_master:spi_core|spi_2x_ce    ; 3       ;
+; gd_control:I_GD|spi_interface:I_SPI|spi_master:spi_core|di_req_o_reg ; 8       ;
+; gatep:I_GATEP|en_gate                                                ; 4       ;
+; gd_control:I_GD|ready                                                ; 2       ;
+; Total number of inverted registers = 7                               ;         ;
++----------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |V2495_GatePattern|gd_control:I_GD|spi_interface:I_SPI|command[15]                      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |V2495_GatePattern|gd_control:I_GD|spi_interface:I_SPI|spi_master:spi_core|state_reg[3] ;
+; 3:1                ; 18 bits   ; 36 LEs        ; 0 LEs                ; 36 LEs                 ; Yes        ; |V2495_GatePattern|gd_control:I_GD|spi_interface:I_SPI|di_i[16]                         ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |V2495_GatePattern|gd_control:I_GD|spi_interface:I_SPI|spi_master:spi_core|sh_reg[4]    ;
+; 5:1                ; 15 bits   ; 45 LEs        ; 0 LEs                ; 45 LEs                 ; Yes        ; |V2495_GatePattern|gd_control:I_GD|spi_data_write[13]                                   ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |V2495_GatePattern|gd_control:I_GD|address_ch[2]                                        ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |V2495_GatePattern|gd_control:I_GD|spi_address[11]                                      ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |V2495_GatePattern|gd_control:I_GD|spi_address[15]                                      ;
+; 24:1               ; 8 bits    ; 128 LEs       ; 16 LEs               ; 112 LEs                ; Yes        ; |V2495_GatePattern|gd_control:I_GD|spi_address[6]                                       ;
+; 24:1               ; 5 bits    ; 80 LEs        ; 75 LEs               ; 5 LEs                  ; Yes        ; |V2495_GatePattern|lb_int:I_LBUS_INTERFACE|rreg[22]                                     ;
+; 25:1               ; 11 bits   ; 176 LEs       ; 176 LEs              ; 0 LEs                  ; Yes        ; |V2495_GatePattern|lb_int:I_LBUS_INTERFACE|rreg[25]                                     ;
+; 26:1               ; 3 bits    ; 51 LEs        ; 48 LEs               ; 3 LEs                  ; Yes        ; |V2495_GatePattern|lb_int:I_LBUS_INTERFACE|LAD_out[8]                                   ;
+; 27:1               ; 8 bits    ; 144 LEs       ; 136 LEs              ; 8 LEs                  ; Yes        ; |V2495_GatePattern|lb_int:I_LBUS_INTERFACE|LAD_out[6]                                   ;
+; 27:1               ; 3 bits    ; 54 LEs        ; 51 LEs               ; 3 LEs                  ; Yes        ; |V2495_GatePattern|lb_int:I_LBUS_INTERFACE|LAD_out[2]                                   ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |V2495_GatePattern|lb_int:I_LBUS_INTERFACE|LBSTATE                                      ;
+; 24:1               ; 3 bits    ; 48 LEs        ; 18 LEs               ; 30 LEs                 ; No         ; |V2495_GatePattern|gd_control:I_GD|Selector8                                            ;
+; 12:1               ; 3 bits    ; 24 LEs        ; 9 LEs                ; 15 LEs                 ; No         ; |V2495_GatePattern|gd_control:I_GD|spi_interface:I_SPI|state.read7                      ;
+; 14:1               ; 2 bits    ; 18 LEs        ; 8 LEs                ; 10 LEs                 ; No         ; |V2495_GatePattern|gd_control:I_GD|spi_interface:I_SPI|state.write6                     ;
+; 27:1               ; 2 bits    ; 36 LEs        ; 12 LEs               ; 24 LEs                 ; No         ; |V2495_GatePattern|gd_control:I_GD|Selector6                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: gd_control:I_GD|spi_interface:I_SPI|spi_master:spi_core ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; n              ; 32    ; Signed Integer                                                              ;
+; cpol           ; '0'   ; Enumerated                                                                  ;
+; cpha           ; '0'   ; Enumerated                                                                  ;
+; prefetch       ; 2     ; Signed Integer                                                              ;
+; spi_2x_clk_div ; 5     ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "gd_control:I_GD|spi_interface:I_SPI|spi_master:spi_core"                                     ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; sck_ena_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; sck_ena_ce_o  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; do_transfer_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; wren_o        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; rx_bit_reg_o  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; state_dbg_o   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; core_clk_o    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; core_n_clk_o  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; core_ce_o     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; core_n_ce_o   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; sh_reg_dbg_o  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "gatep:I_GATEP"                                                                          ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; a[31..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[31..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; c[31..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Wed May 20 10:14:13 2026
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off V2495_GatePattern -c V2495_GatePattern
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 0 entities, in source file src/V2495_package.vhd
+    Info (12022): Found design unit 1: V2495_pkg
+Info (12021): Found 2 design units, including 1 entities, in source file src/spi_master.vhd
+    Info (12022): Found design unit 1: spi_master-rtl
+    Info (12023): Found entity 1: spi_master
+Info (12021): Found 2 design units, including 1 entities, in source file src/spi_interface.vhd
+    Info (12022): Found design unit 1: spi_interface-bv
+    Info (12023): Found entity 1: spi_interface
+Info (12021): Found 2 design units, including 1 entities, in source file src/gd_control.vhd
+    Info (12022): Found design unit 1: gd_control-rtl
+    Info (12023): Found entity 1: gd_control
+Info (12021): Found 2 design units, including 1 entities, in source file src/V2495_GatePattern.vhd
+    Info (12022): Found design unit 1: V2495_GatePattern-rtl
+    Info (12023): Found entity 1: V2495_GatePattern
+Info (12021): Found 2 design units, including 1 entities, in source file src/lb_int.vhd
+    Info (12022): Found design unit 1: lb_int-rtl
+    Info (12023): Found entity 1: lb_int
+Info (12021): Found 2 design units, including 1 entities, in source file src/gatep.vhd
+    Info (12022): Found design unit 1: gatep-rtl
+    Info (12023): Found entity 1: gatep
+Info (12127): Elaborating entity "V2495_GatePattern" for the top level hierarchy
+Info (12128): Elaborating entity "gatep" for hierarchy "gatep:I_GATEP"
+Info (12128): Elaborating entity "lb_int" for hierarchy "lb_int:I_LBUS_INTERFACE"
+Info (12128): Elaborating entity "gd_control" for hierarchy "gd_control:I_GD"
+Info (12128): Elaborating entity "spi_interface" for hierarchy "gd_control:I_GD|spi_interface:I_SPI"
+Warning (10036): Verilog HDL or VHDL warning at spi_interface.vhd(60): object "int2_data_valid" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at spi_interface.vhd(146): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "spi_master" for hierarchy "gd_control:I_GD|spi_interface:I_SPI|spi_master:spi_core"
+Warning (13034): The following nodes have both tri-state and non-tri-state drivers
+    Warning (13035): Inserted always-enabled tri-state buffer between "E[1]" and its non-tri-state driver.
+Warning (13009): TRI or OPNDRN buffers permanently enabled
+    Warning (13010): Node "E[1]~synth"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "nOEG" is stuck at VCC
+    Warning (13410): Pin "SELE" is stuck at GND
+    Warning (13410): Pin "nOEE" is stuck at GND
+    Warning (13410): Pin "LED[0]" is stuck at VCC
+    Warning (13410): Pin "LED[1]" is stuck at GND
+    Warning (13410): Pin "LED[2]" is stuck at GND
+    Warning (13410): Pin "LED[3]" is stuck at GND
+    Warning (13410): Pin "LED[4]" is stuck at GND
+    Warning (13410): Pin "LED[5]" is stuck at GND
+    Warning (13410): Pin "LED[6]" is stuck at GND
+    Warning (13410): Pin "LED[7]" is stuck at GND
+    Warning (13410): Pin "nINT" is stuck at VCC
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 105 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "A[0]"
+    Warning (15610): No output dependent on input pin "A[1]"
+    Warning (15610): No output dependent on input pin "A[2]"
+    Warning (15610): No output dependent on input pin "A[3]"
+    Warning (15610): No output dependent on input pin "A[4]"
+    Warning (15610): No output dependent on input pin "A[5]"
+    Warning (15610): No output dependent on input pin "A[6]"
+    Warning (15610): No output dependent on input pin "A[7]"
+    Warning (15610): No output dependent on input pin "A[8]"
+    Warning (15610): No output dependent on input pin "A[9]"
+    Warning (15610): No output dependent on input pin "A[10]"
+    Warning (15610): No output dependent on input pin "A[11]"
+    Warning (15610): No output dependent on input pin "A[12]"
+    Warning (15610): No output dependent on input pin "A[13]"
+    Warning (15610): No output dependent on input pin "A[14]"
+    Warning (15610): No output dependent on input pin "A[15]"
+    Warning (15610): No output dependent on input pin "A[16]"
+    Warning (15610): No output dependent on input pin "A[17]"
+    Warning (15610): No output dependent on input pin "A[18]"
+    Warning (15610): No output dependent on input pin "A[19]"
+    Warning (15610): No output dependent on input pin "A[20]"
+    Warning (15610): No output dependent on input pin "A[21]"
+    Warning (15610): No output dependent on input pin "A[22]"
+    Warning (15610): No output dependent on input pin "A[23]"
+    Warning (15610): No output dependent on input pin "A[24]"
+    Warning (15610): No output dependent on input pin "A[25]"
+    Warning (15610): No output dependent on input pin "A[26]"
+    Warning (15610): No output dependent on input pin "A[27]"
+    Warning (15610): No output dependent on input pin "A[28]"
+    Warning (15610): No output dependent on input pin "A[29]"
+    Warning (15610): No output dependent on input pin "A[30]"
+    Warning (15610): No output dependent on input pin "A[31]"
+    Warning (15610): No output dependent on input pin "B[0]"
+    Warning (15610): No output dependent on input pin "B[1]"
+    Warning (15610): No output dependent on input pin "B[2]"
+    Warning (15610): No output dependent on input pin "B[3]"
+    Warning (15610): No output dependent on input pin "B[4]"
+    Warning (15610): No output dependent on input pin "B[5]"
+    Warning (15610): No output dependent on input pin "B[6]"
+    Warning (15610): No output dependent on input pin "B[7]"
+    Warning (15610): No output dependent on input pin "B[8]"
+    Warning (15610): No output dependent on input pin "B[9]"
+    Warning (15610): No output dependent on input pin "B[10]"
+    Warning (15610): No output dependent on input pin "B[11]"
+    Warning (15610): No output dependent on input pin "B[12]"
+    Warning (15610): No output dependent on input pin "B[13]"
+    Warning (15610): No output dependent on input pin "B[14]"
+    Warning (15610): No output dependent on input pin "B[15]"
+    Warning (15610): No output dependent on input pin "B[16]"
+    Warning (15610): No output dependent on input pin "B[17]"
+    Warning (15610): No output dependent on input pin "B[18]"
+    Warning (15610): No output dependent on input pin "B[19]"
+    Warning (15610): No output dependent on input pin "B[20]"
+    Warning (15610): No output dependent on input pin "B[21]"
+    Warning (15610): No output dependent on input pin "B[22]"
+    Warning (15610): No output dependent on input pin "B[23]"
+    Warning (15610): No output dependent on input pin "B[24]"
+    Warning (15610): No output dependent on input pin "B[25]"
+    Warning (15610): No output dependent on input pin "B[26]"
+    Warning (15610): No output dependent on input pin "B[27]"
+    Warning (15610): No output dependent on input pin "B[28]"
+    Warning (15610): No output dependent on input pin "B[29]"
+    Warning (15610): No output dependent on input pin "B[30]"
+    Warning (15610): No output dependent on input pin "B[31]"
+    Warning (15610): No output dependent on input pin "IDD[0]"
+    Warning (15610): No output dependent on input pin "IDD[1]"
+    Warning (15610): No output dependent on input pin "IDD[2]"
+    Warning (15610): No output dependent on input pin "IDE[0]"
+    Warning (15610): No output dependent on input pin "IDE[1]"
+    Warning (15610): No output dependent on input pin "IDE[2]"
+    Warning (15610): No output dependent on input pin "IDF[0]"
+    Warning (15610): No output dependent on input pin "IDF[1]"
+    Warning (15610): No output dependent on input pin "IDF[2]"
+    Warning (15610): No output dependent on input pin "GD_DELAYED[0]"
+    Warning (15610): No output dependent on input pin "GD_DELAYED[1]"
+    Warning (15610): No output dependent on input pin "GD_DELAYED[2]"
+    Warning (15610): No output dependent on input pin "GD_DELAYED[3]"
+    Warning (15610): No output dependent on input pin "GD_DELAYED[4]"
+    Warning (15610): No output dependent on input pin "GD_DELAYED[5]"
+    Warning (15610): No output dependent on input pin "GD_DELAYED[6]"
+    Warning (15610): No output dependent on input pin "GD_DELAYED[7]"
+    Warning (15610): No output dependent on input pin "GD_DELAYED[8]"
+    Warning (15610): No output dependent on input pin "GD_DELAYED[9]"
+    Warning (15610): No output dependent on input pin "GD_DELAYED[10]"
+    Warning (15610): No output dependent on input pin "GD_DELAYED[11]"
+    Warning (15610): No output dependent on input pin "GD_DELAYED[12]"
+    Warning (15610): No output dependent on input pin "GD_DELAYED[13]"
+    Warning (15610): No output dependent on input pin "GD_DELAYED[14]"
+    Warning (15610): No output dependent on input pin "GD_DELAYED[15]"
+    Warning (15610): No output dependent on input pin "GD_DELAYED[16]"
+    Warning (15610): No output dependent on input pin "GD_DELAYED[17]"
+    Warning (15610): No output dependent on input pin "GD_DELAYED[18]"
+    Warning (15610): No output dependent on input pin "GD_DELAYED[19]"
+    Warning (15610): No output dependent on input pin "GD_DELAYED[20]"
+    Warning (15610): No output dependent on input pin "GD_DELAYED[21]"
+    Warning (15610): No output dependent on input pin "GD_DELAYED[22]"
+    Warning (15610): No output dependent on input pin "GD_DELAYED[23]"
+    Warning (15610): No output dependent on input pin "GD_DELAYED[24]"
+    Warning (15610): No output dependent on input pin "GD_DELAYED[25]"
+    Warning (15610): No output dependent on input pin "GD_DELAYED[26]"
+    Warning (15610): No output dependent on input pin "GD_DELAYED[27]"
+    Warning (15610): No output dependent on input pin "GD_DELAYED[28]"
+    Warning (15610): No output dependent on input pin "GD_DELAYED[29]"
+    Warning (15610): No output dependent on input pin "GD_DELAYED[30]"
+    Warning (15610): No output dependent on input pin "GD_DELAYED[31]"
+Info (21057): Implemented 1222 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 113 input pins
+    Info (21059): Implemented 87 output pins
+    Info (21060): Implemented 112 bidirectional pins
+    Info (21061): Implemented 910 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 126 warnings
+    Info: Peak virtual memory: 715 megabytes
+    Info: Processing ended: Wed May 20 10:14:16 2026
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+

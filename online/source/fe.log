@@ -1,0 +1,22 @@
+Frontend name          :     cupid_mnv_daq
+Event buffer size      :     100000000
+User max event size    :     50000000
+User max frag. size    :     5242880
+# of events per buffer :     2
+
+Connect to experiment WC...
+OK
+Init hardware...
+V1742
+gVme 1 ret 0
+
+Connected to CAEN Digitizer Model V1742 6 -- 32 channels
+STo configurando
+STo configurando per davvero
+Correction tables for custom corrections loaded successfully.
+
+Calibrating...OK
+[2J[1;1Hcupid_mnv_daq connected to <local>. Press "!" to exit[2;1H================================================================================[3;1HRun status:   Stopped[3;26HRun number 870   [4;1H================================================================================[5;1HEquipment     Status     Events     Events/sec Rate[B/s]  ODB->FE    FE->ODB[6;1H--------------------------------------------------------------------------------[7;1HTrigger[1;73H14:01:11[7;15HOK       [7;26H0      [7;37H0.0      [7;48H0.0      [7;59H0       [7;70H0       [8;1H[1;73H14:01:11[7;15HOK       [7;26H0      [7;37H0.0      [7;48H0.0      [7;59H0       [7;70H0       [8;1H[1;73H14:01:14[7;15HOK       [7;26H0      [7;37H0.0      [7;48H0.0      [7;59H0       [7;70H0       [8;1H[1;73H14:01:17[7;15HOK       [7;26H0      [7;37H0.0      [7;48H0.0      [7;59H0       [7;70H0       [8;1H-999999
+[21;1H[cupid_fe_soloV1742_v2.cxx:463:cupid_mnv_daq,ERROR] STOP: Parameter '/Experiment/Run Parameters/Angle 1' not configured!                                       [1;73H14:01:20[7;15HOK       [7;26H0      [7;37H0.0      [7;48H0.0      [7;59H0       [7;70H0       [8;1H[1;73H14:01:23[7;15HOK       [7;26H0      [7;37H0.0      [7;48H0.0      [7;59H0       [7;70H0       [8;1H[1;73H14:01:26[7;15HOK       [7;26H0      [7;37H0.0      [7;48H0.0      [7;59H0       [7;70H0       [8;1H[1;73H14:01:29[7;15HOK       [7;26H0      [7;37H0.0      [7;48H0.0      [7;59H0       [7;70H0       [8;1H[1;73H14:01:32[7;15HOK       [7;26H0      [7;37H0.0      [7;48H0.0      [7;59H0       [7;70H0       [8;1H[1;73H14:01:35[7;15HOK       [7;26H0      [7;37H0.0      [7;48H0.0      [7;59H0       [7;70H0       [8;1H[1;73H14:01:38[7;15HOK       [7;26H0      [7;37H0.0      [7;48H0.0      [7;59H0       [7;70H0       [8;1H[1;73H14:01:41[7;15HOK       [7;26H0      [7;37H0.0      [7;48H0.0      [7;59H0       [7;70H0       [8;1H[1;73H14:01:44[7;15HOK       [7;26H0      [7;37H0.0      [7;48H0.0      [7;59H0       [7;70H0       [8;1H[1;73H14:01:47[7;15HOK       [7;26H0      [7;37H0.0      [7;48H0.0      [7;59H0       [7;70H0       [8;1H[1;73H14:01:50[7;15HOK       [7;26H0      [7;37H0.0      [7;48H0.0      [7;59H0       [7;70H0       [8;1H[1;73H14:01:53[7;15HOK       [7;26H0      [7;37H0.0      [7;48H0.0      [7;59H0       [7;70H0       [8;1HReceived Ctrl-C, aborting...
+[2J[1;1HReceived Ctrl-C, aborting
+Frontend shut down.

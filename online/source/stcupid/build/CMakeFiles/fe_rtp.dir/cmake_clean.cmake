@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/fe_rtp.dir/fe_rtp_multistream.cxx.o"
-  "CMakeFiles/fe_rtp.dir/fe_rtp_multistream.cxx.o.d"
+  "CMakeFiles/fe_rtp.dir/fe_rtp_multistream24bit.cxx.o"
+  "CMakeFiles/fe_rtp.dir/fe_rtp_multistream24bit.cxx.o.d"
   "fe_rtp"
   "fe_rtp.pdb"
 )
